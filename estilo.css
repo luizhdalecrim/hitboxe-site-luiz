@@ -11,13 +11,13 @@ body
 #caixa1
 {
     background-color: #464343;
-    width: 60px;
+    width: 100px;
     padding: 10px;
     border: none;
     border-radius: 100px;
     text-align: center;
     display: flex;
-    margin-left: 500px;
+    margin-left: 450px;
 }
 
 #caixa2
@@ -26,12 +26,12 @@ body
     border-color: white;
     border-width: 1px;
     border-style: solid;
-    width: 500px;
+    width: 600px;
     padding: 10px;
     border-radius: 100px;
     text-align: center;
     display: flex;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-top: 2px;
 }
 
@@ -41,13 +41,46 @@ body
     border-color: white;
     border-width: 1px;
     border-style: solid;
+    width: 110px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    margin-left: 400px;
+    margin-top: 10px;
+}
+
+#caixa4
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(104, 0, 0);
     width: 100px;
     padding: 10px;
     border-radius: 100px;
     text-align: center;
     display: flex;
-    margin-left: 300px;
-    margin-top: 2px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#Login
+{
+    border-style: none;
+    border-width: 1px;
+    border-radius: 100px;
+    padding: 5px 20px;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+
+    display: block;
+    background-color: rgb(104, 0, 0);
+    color: white;
 }
 
 #cadastro
@@ -61,8 +94,6 @@ body
     cursor: pointer;
     outline: none;
     
-
-    margin-left: 40px;
     width: 60px;
     height: 30px;
     display: block;
@@ -97,12 +128,13 @@ body
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', sans-serif;
+    padding: 5px 20px;
     font-size: 25px;
     cursor: pointer;
     outline: none;
     
 
-    margin-left: 40px;
+    margin-left: 20px;
     width: 60px;
     height: 30px;
     display: block;
@@ -125,7 +157,7 @@ body
     outline: none;
     
 
-    margin-left: 115px;
+    margin-left: 145px;
     display: block;
     background-color: rgb(104, 0, 0);
     color: white;
@@ -138,6 +170,7 @@ body
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', sans-serif;
+    padding: 5px 20px;
     font-size: 25px;
     cursor: pointer;
     outline: none;
@@ -150,3 +183,31 @@ body
     color: white;
 }
 
+#logo
+{
+    display: flex;
+    position: absolute;
+}
+
+#logo1
+{
+    display: flex;
+    position: absolute;
+    margin-top: 60pt;
+    width: 80%;
+    height: 100%;
+    filter: grayscale(70%);
+    margin-left: 360px;
+}
+
+#logo2
+{
+    position: absolute;
+    margin-top: 60pt;
+    width: 45%;
+    height: 60%;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
