@@ -1,0 +1,321 @@
+body
+{
+    background-color: black;
+}
+
+.home
+{
+    display: flex;
+}
+
+#caixa1
+{
+    background-color: #464343;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    margin-left: 450px;
+}
+
+#caixa2
+{
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    width: 600px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    margin-left: 80px;
+    margin-top: 2px;
+}
+
+#caixa3
+{
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    width: 110px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    margin-left: 400px;
+    margin-top: 10px;
+}
+
+#caixa4
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(104, 0, 0);
+    width: 100px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#caixa5
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(207, 0, 0);
+    width: 600px;
+    height: 450px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-left: 400px;
+    margin-top: 10px;
+
+}
+
+
+#Login
+{
+    border-style: none;
+    border-width: 1px;
+    border-radius: 100px;
+    padding: 5px 20px;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+
+    display: block;
+    background-color: rgb(104, 0, 0);
+    color: white;
+}
+
+#cadastro
+{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+    width: 60px;
+    height: 30px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#faq
+ {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #464343;
+}
+
+#sobre
+{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    padding: 5px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+
+    margin-left: 20px;
+    width: 60px;
+    height: 30px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#inicio
+{
+    background: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 100px;
+    padding: 5px 20px;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+
+    margin-left: 145px;
+    display: block;
+    background-color: rgb(104, 0, 0);
+    color: white;
+}
+
+#planos
+{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    padding: 5px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    
+    margin-left: 100px;
+    width: 60px;
+    height: 30px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#logo
+{
+    display: flex;
+    position: absolute;
+}
+
+#caixa5
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(207, 0, 0);
+    width: 900px;
+    height: 700px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-left: 450px;
+
+} 
+
+#tit
+{
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    margin-top: 60px;
+    margin-left: 170px;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#subtit
+{
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    font-size: 23px;
+
+    margin-left: 75px;
+}
+
+.email-input 
+{
+    width: 300px;
+    padding: 5px; 
+    border-radius: 10px;
+    border-width: 2px;
+    margin-left: 43px;
+
+}
+
+#senha
+{
+    width: 300px;
+    padding: 5px; 
+    border-radius: 10px;
+    border-width: 2px;
+    margin-left: 43px;
+}
+
+#btlogin
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    
+
+    display: block;
+    background-color: rgb(104, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-top: 55px;
+    margin-left: 140px;
+    text-align: center;
+}
+
+#cadastro1
+{
+    display: flex;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(80, 80, 80);
+    font-size: 25px;
+    margin-left: 111px;
+    border:none;
+}
+
+#trocarsenha
+{
+    display: flex;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(80, 80, 80);
+    font-size: 18px;
+    margin-left: 106px;
+    border: none;
+    cursor: pointer;
+}
+
+#fotologin
+{
+    width: 430px;
+    height: 600px;
+    display: flex;
+    position: absolute;
+    margin-left: 425px;
+    margin-top: 60px;
+    border: solid;
+    border-width: 4px;
+    border-radius: 30px;
+    border-color: rgb(207, 0, 0);
+}
+
