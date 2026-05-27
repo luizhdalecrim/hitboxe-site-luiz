@@ -6,6 +6,13 @@ body
 .home
 {
     display: flex;
+    position: fixed;
+    background-color: black;
+    top: 0px;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-right: 18px;
+    z-index: 1000;
 }
 
 #caixa1
@@ -46,7 +53,7 @@ body
     border-radius: 100px;
     text-align: center;
     display: flex;
-    margin-left: 400px;
+    margin-left: 290px;
     margin-top: 10px;
 }
 
@@ -204,6 +211,7 @@ body
 {
     display: flex;
     position: absolute;
+    margin-top: 30px;
 }
 
 #logo1
@@ -372,7 +380,7 @@ body
     display: flex;
     margin-left: 500px;
     position: absolute;
-    top: 1935px;
+    top: 1863px;
     border-radius: 20px;
     border-width: 2px;
     border-color: rgb(207, 0, 0);
