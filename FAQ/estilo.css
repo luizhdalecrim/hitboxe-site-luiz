@@ -1,412 +1,56 @@
-body
-{
-    background-color: black;
-}
+body { background-color: black; margin: 0; padding: 0; }
 
-.home
-{
-    display: flex;
-}
+.home { display: flex; flex-direction: row; align-items: center; gap: 10px; padding: 10px 20px; background-color: black; }
+#logo { width: 55px; height: auto; flex-shrink: 0; margin-left: 10px; }
+#caixa1 { background-color: #464343; padding: 8px 16px; border: none; border-radius: 100px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+#caixa2 { background-color: rgb(0,0,0); border: 1px solid white; padding: 8px 16px; border-radius: 100px; display: flex; align-items: center; gap: 10px; flex: 1; }
+#caixa3 { border: 1px solid white; background-color: #ab2225; padding: 8px 16px; border-radius: 100px; display: flex; align-items: center; flex-shrink: 0; }
+#caixa4 { background-color: black; border: 1px solid white; padding: 8px 16px; border-radius: 100px; display: flex; align-items: center; flex-shrink: 0; }
+#faq { background-color: #464343; border: none; font-family: Arial, sans-serif; font-size: 18px; cursor: pointer; color: white; font-weight: bold; width: 100%; height: 100%; display: block; outline: none; }
+#dashboard { border: 1px solid white; border-radius: 100px; padding: 5px 10px; background-color: rgb(104,0,0); color: white; font-family: "Gill Sans", sans-serif; font-size: 18px; cursor: pointer; outline: none; }
+#inicio, #consultoria, #planos { background: none; border: none; padding: 5px 10px; font-family: "Gill Sans", sans-serif; font-size: 18px; cursor: pointer; color: white; outline: none; }
+#sair, #fechar { background: none; border: none; font-family: "Gill Sans", sans-serif; font-size: 20px; cursor: pointer; color: white; outline: none; display: flex; align-items: center; }
+#usuario { border: none; border-radius: 100px; padding: 6px 12px; font-family: "Gill Sans", sans-serif; font-size: 20px; cursor: pointer; display: flex; align-items: center; background-color: #ab2225; color: white; outline: none; }
+#fotousuario { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+#menu { width: 40px; height: 32px; cursor: pointer; flex-shrink: 0; }
+#separacao { display: none; }
 
-#caixa1
-{
-    background-color: #464343;
-    width: 300px;
+#tit { font-family: Arial, sans-serif; font-weight: 100; margin-top: 30px; text-decoration: underline; font-size: 35px; color: white; text-align: center; }
+#tit1 { font-family: Arial, sans-serif; font-weight: 100; font-size: 28px; color: white; margin-left: 30px; }
+#tit2 { font-family: Arial, sans-serif; font-weight: 100; font-size: 28px; color: white; margin-left: 30px; margin-top: 10px; }
+#tit3 { font-family: Arial, sans-serif; font-weight: 100; font-size: 30px; color: white; margin-left: 30px; margin-top: 5px; }
+
+.caixa-faq-layout { display: flex; flex-direction: row; gap: 20px; padding: 20px 40px; flex-wrap: wrap; justify-content: center; }
+
+#caixa5 {
+    background-color: rgb(255,255,255);
+    border: 2px solid rgb(207,0,0);
+    width: 380px;
+    min-height: 500px;
     padding: 20px;
-    border: none;
-    border-radius: 100px;
-    text-align: center;
-    display: flex;
-    margin-left: 400px;
-}
-
-#caixa2
-{
-    background-color: rgb(0, 0, 0);
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
-    width: 4000px;
-    padding: 10px;
-    border-radius: 100px;
-    text-align: center;
-    display: flex;
-    margin-left: 80px;
-    margin-top: 2px;
-}
-
-#caixa3
-{
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-    background-color: #ab2225;
-    width: 175px;
-    padding: 15px;
-    border-radius: 100px;
-    text-align: center;
-    display: flex;
-    margin-left: 420px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-#caixa4
-{
-    background-color: rgb(0, 0, 0);
-    border-width: 1px;
-    border-style: solid;
-    width: 40px;
-    padding: 10px;
-    border-radius: 100px;
-    text-align: center;
-    display: flex;
-
-}
-
-#caixa5
-{
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(207, 0, 0);
-    width: 1000px;
-    height: 560px;
-    padding: 10px;
     border-radius: 20px;
     display: flex;
-
-    gap: 10px; 
-    margin-left: 400px;
-    margin-top: 80px;
-
+    flex-direction: column;
+    gap: 12px;
 }
 
-#sair
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 5px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-    width: 110px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-
-}
-
-#fechar
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 5px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-    width: 110px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-
-}
-
-#usuario
-{
-    border-style: none;
-    border-width: 1px;
-    border-radius: 100px;
-    padding: 10px 40px;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    width: 500px;
-    
-
-    display: block;
-    background-color: #ab2225;
-    color: white;
-}
-
-#faq
- {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-    color: white;
-    font-weight: bold;
-    
-
-    width: 100%;
-    height: 100%;
-    display: block;
+#caixa6 {
     background-color: #464343;
-}
-
-#dashboard
-{
-    background: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
+    padding: 16px 24px;
+    border: none;
     border-radius: 100px;
-    padding: 5px 20px;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
-    margin-left: 10px;
-    margin-right: 0px;
-    display: block;
-    background-color: rgb(104, 0, 0);
-    color: white;
-}
-
-#inicio
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 4px;
-    font-family: 'Gill Sans', sans-serif;
-    padding: 5px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
-    margin-left: 20px;
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-#consultoria
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 4px;
-    font-family: 'Gill Sans', sans-serif;
-    padding: 5px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
     margin-left: 40px;
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-#planos
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 4px;
-    font-family: 'Gill Sans', sans-serif;
-    padding: 5px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-    margin-left: 110px;
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-#logo
-{
-    display: flex;
-    position: absolute;
-    margin-left: 175px;
-}
-
-#separacao
-{
-    display: flex;
-    position: absolute;
-
-    margin-left: 120px;
-    height: 915px;
-
-}
-
-#menu
-{
-    margin-top: 5px;
-    cursor: pointer;
-    
-    width: 50px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-#fotousuario
-{
-    display: flex;
-    position: absolute;
-
-    width: 185px;
-    margin-top: -20px;
-    margin-left: -45px;
-    border-radius: 20px;
-}
-
-#tit
-{
-    font-family: Arial, sans-serif;
-    font-weight: 100;
-    margin-top: 100px;
-    text-decoration: underline;
-    font-size: 35px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#tit1
-{
-    font-family: Arial, sans-serif;
-    display: flex;
-    position: absolute;
-    font-weight: 100;
-    margin-left: 90px;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-
-}
-
-#subtit
-{
-    font-family: Arial, sans-serif;
-    font-size: 22px;
     margin-top: 20px;
-    margin-left: 30px;
- 
-
-    flex-direction: column;
 }
 
-#subtitbld
-{
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    margin-top: 20px;
-
-    flex-direction: column;
-}
-
-
-#subtitbld1
-{
-    font-family: Arial, sans-serif;
-    font-size: 23px;
-    margin-top: 20px;
-    margin-left: 50px;
-    flex-direction: column;
-}
-
-#subtitbld2
-{
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    margin-top: 20px;
-    margin-left: 350px;
-    flex-direction: column;
-    font-weight: bolder;
-}
-
-hr
-{
-    width: 700px;
-    border: solid 1px black;
-}
-
-
-#txt
-{
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    margin: 0px;
-}
-
-#ftconsultor
-{
-    width: 85px;
-    height: 85px;
-}
-
-#btfechar
-{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    position: absolute;
-    margin-left: 860px;
-    border-radius: 100px;
-}
-
-#textbox
-{
-    width: 710px;
-    height: 50px;
-    display: flex;
-    position: absolute;
-    margin-top: 480px;
-    border-radius: 10px;
-    border: 2px solid black;
-    
-}
-
-#nvconsult
-{
-    background: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    border-radius: 100px;
-    padding: 5px 2px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-    width: 280px;
-    height: 50px;
-    
-
-    margin-left: 550px;
-    margin-top: 480px;
-    display: block;
-    background-color: rgb(104, 0, 0);
-    color: white;
-}
+#ftconsultor { width: 75px; height: 75px; border-radius: 50%; }
+#btfechar { width: 45px; height: 45px; border-radius: 100px; align-self: flex-end; }
+#textbox { width: 100%; height: 50px; border-radius: 10px; border: 2px solid black; box-sizing: border-box; margin-top: auto; }
+#nvconsult { border: 1px solid white; border-radius: 100px; padding: 8px 16px; font-family: "Gill Sans", sans-serif; font-size: 18px; cursor: pointer; background-color: rgb(104,0,0); color: white; outline: none; align-self: flex-end; }
+#chamado { background: none; border: none; font-family: Arial, sans-serif; font-size: 18px; cursor: pointer; color: white; font-weight: bold; width: 100%; height: 100%; display: block; outline: none; background-color: #464343; }
+hr { width: 100%; border: solid 1px black; }
+#txt { font-family: Arial, sans-serif; font-size: 16px; font-weight: 100; margin: 0; }

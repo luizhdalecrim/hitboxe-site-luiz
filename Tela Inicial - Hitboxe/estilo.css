@@ -1,30 +1,43 @@
 body
 {
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
+/* ===== NAVBAR ===== */
 .home
 {
     display: flex;
-    position: fixed;
-    background-color: black;
-    top: 0px;
+    flex-direction: row;
     align-items: center;
-    padding-bottom: 30px;
-    margin-right: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 10px 20px;
     z-index: 1000;
+    gap: 12px;
+}
+
+#logo
+{
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 #caixa1
 {
     background-color: #464343;
-    width: 100px;
-    padding: 10px;
+    padding: 8px 16px;
     border: none;
     border-radius: 100px;
-    text-align: center;
     display: flex;
-    margin-left: 450px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 #caixa2
@@ -33,13 +46,13 @@ body
     border-color: white;
     border-width: 1px;
     border-style: solid;
-    width: 600px;
-    padding: 10px;
+    padding: 8px 16px;
     border-radius: 100px;
-    text-align: center;
     display: flex;
-    margin-left: 80px;
-    margin-top: 2px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
 }
 
 #caixa3
@@ -48,13 +61,12 @@ body
     border-color: white;
     border-width: 1px;
     border-style: solid;
-    width: 110px;
-    padding: 10px;
+    padding: 8px 16px;
     border-radius: 100px;
-    text-align: center;
     display: flex;
-    margin-left: 290px;
-    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 #caixa4
@@ -63,190 +75,84 @@ body
     border-style: solid;
     border-color: white;
     background-color: rgb(104, 0, 0);
-    width: 100px;
-    padding: 10px;
+    padding: 8px 16px;
     border-radius: 100px;
-    text-align: center;
     display: flex;
-    margin-left: 20px;
-    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-#caixa5
+/* ===== BOTÕES NAV ===== */
+#Login, #cadastro, #sobre, #inicio, #planos, #faq
 {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(207, 0, 0);
-    width: 600px;
-    height: 450px;
-    padding: 10px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-    margin-left: 400px;
-    margin-top: 10px;
-
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    color: white;
 }
-
 
 #Login
 {
-    border-style: none;
-    border-width: 1px;
-    border-radius: 100px;
-    padding: 5px 20px;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
-    color: white;
-}
-
-#cadastro
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
+    border-radius: 100px;
 }
 
 #faq
- {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+{
+    background-color: #464343;
     font-family: Arial, sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-    color: white;
+    font-size: 18px;
     font-weight: bold;
-    
-
     width: 100%;
     height: 100%;
-    display: block;
-    background-color: #464343;
 }
 
-#sobre
+/* ===== HERO SECTION ===== */
+.hero
 {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    padding: 5px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
-    margin-left: 20px;
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-#inicio
-{
-    background: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    border-radius: 100px;
-    padding: 5px 20px;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-
-    margin-left: 145px;
-    display: block;
-    background-color: rgb(104, 0, 0);
-    color: white;
-}
-
-#planos
-{
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', sans-serif;
-    padding: 5px 20px;
-    font-size: 25px;
-    cursor: pointer;
-    outline: none;
-    
-    margin-left: 100px;
-    width: 60px;
-    height: 30px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-}
-
-#logo
-{
+    position: relative;
+    min-height: 100vh;
     display: flex;
-    position: absolute;
-    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
 }
 
 #logo1
 {
-    display: flex;
     position: absolute;
-    margin-top: 60pt;
+    top: 80px;
+    right: 0;
     width: 80%;
-    height: 100%;
+    height: auto;
     opacity: 0.3;
-    margin-left: 360px;
+    z-index: 0;
 }
 
 #logo2
 {
-    position: absolute;
     width: 45%;
-    height: 60%;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    z-index: 1;
 }
 
 #texto-logo
 {
-    position: absolute; 
-    top: 60%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
     color: white;
     font-size: 40px;
-    margin-top: 13px;
-    border-radius: 5px;
     font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 10px 0;
 }
 
 #Bprincipal
@@ -256,73 +162,65 @@ body
     border-width: 1px;
     border-radius: 100px;
     padding: 20px 25px;
-    margin: 0;
     font-family: 'Gill Sans', sans-serif;
     font-size: 25px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-    top: 65%; 
-    left: 45%; 
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+/* ===== SEÇÃO CAMPEÃO ===== */
+.secao-campeao
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
 }
 
 #campeao
 {
-    width: 600px;
-    height: 600px;
-    margin-left: 300px;
+    width: 500px;
+    max-width: 90%;
+    height: auto;
     opacity: 0.7;
 }
 
-#TxtMat1
+.bloco-matricula
 {
-    position: absolute; 
-    top: 65%; 
-    left: 70%; 
-    transform: translate(-50%, -50%); 
-    color: white;
-    font-size: 40px;
-    margin-top: 700px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-#TxtMat2
+#TxtMat1, #TxtMat2
 {
-    position: absolute; 
-    top: 65%; 
-    left: 70%; 
-    transform: translate(-50%, -50%); 
     color: white;
     font-size: 40px;
-    margin-top: 750px;
-    border-radius: 5px;
     font-family: Arial, sans-serif;
     opacity: 0.6;
+    margin: 0;
+    text-align: center;
 }
 
 #vitoria
 {
-    position: absolute; 
-    top: 71%; 
-    left: 70%; 
-    transform: translate(-50%, -50%); 
-    color: white;
-    font-size: 40px;
-    margin-top: 750px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
     color: rgb(255, 255, 255);
+    font-size: 40px;
     text-shadow: 10px 10px 9px rgb(255, 255, 255);
     -webkit-text-stroke: 0.5px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
     font-family: Stencil Std, fantasy;
+    text-align: center;
+    margin: 0;
 }
 
 #Matricula
@@ -332,21 +230,16 @@ body
     border-width: 1px;
     border-radius: 100px;
     padding: 25px 30px;
-    margin: 0;
     font-family: 'Gill Sans', sans-serif;
     font-size: 25px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-    top: 167%; 
-    left: 65.5%; 
+    margin-top: 20px;
 }
 
+/* ===== TÍTULOS SEÇÃO ===== */
 .Tit
 {
     color: white;
@@ -355,8 +248,10 @@ body
     font-size: 50px;
     text-decoration: underline;
     font-weight: 100;
+    margin: 40px 0 20px 0;
 }
 
+/* ===== DIFERENCIAIS ===== */
 .diferenciais::before {
     content: '✓';
     color: rgb(207, 0, 0);
@@ -366,195 +261,115 @@ body
 
 .diferenciais
 {
-        
-    margin-left: 50px;
-    display: flexbox;
-    max-width: 350px;
     font-size: 25px;
+}
+
+/* ===== CAIXA DIFERENCIAIS ===== */
+#caixa5
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(207, 0, 0);
+    max-width: 650px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto 40px auto;
+    position: relative;
 }
 
 #chines
 {
-    width: 500px;
-    height: 470px;
-    display: flex;
-    margin-left: 500px;
-    position: absolute;
-    top: 1863px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 20px;
     border-width: 2px;
     border-color: rgb(207, 0, 0);
     border-style: solid;
+    margin-top: 10px;
 }
 
-.caixas1
+/* ===== CARDS DE PLANOS/UNIDADES ===== */
+.cards-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 40px 60px 40px;
+}
+
+.caixas1, .caixas2
 {
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(207, 0, 0);
-    width: 350px;
-    height: 570px;
-    padding: 8px;
+    width: 320px;
+    padding: 16px;
     border-radius: 20px;
     display: flex;
-    gap: 10px; 
-    margin-left: 100px;
-    margin-top: 8px;
-    position: absolute;
     flex-direction: column;
-
-}
-
-.caixas2
-{
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(207, 0, 0);
-    width: 350px;
-    height: 570px;
-    padding: 8px;
-    border-radius: 20px;
-    display: flex;
-    gap: 10px; 
-    margin-left: 750px;
-    margin-top: 8px;
-    position: absolute;
-    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .caixas3
 {
     background-color: rgb(0, 0, 0);
     border: 2px solid rgb(207, 0, 0);
-    width: 350px;
-    height: 570px;
-    padding: 8px;
+    width: 320px;
+    padding: 16px;
     border-radius: 20px;
     display: flex;
-    gap: 10px; 
-    margin-left: 1400px;
-    margin-top: 8px;
-    position: absolute;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-#plano-round
+#plano-round, #plano-professional, #plano-nocaute
 {
-    width: 260px;
-    height: 100px;
-    margin-left: 40px;
-
+    width: 220px;
+    height: auto;
 }
 
-#plano-professional
-{
-    width: 280px;
-    height: 110px;
-    margin-left: 37px;
-    margin-top: 10px;
-}
-
-#plano-nocaute
-{
-    width: 280px;
-    height: 110px;
-    margin-left: 38px;
-    margin-top: 10px;
-}
-
-.diferenciais1::before {
+.diferenciais1::before, .diferenciais2::before, .diferenciais3::before {
     content: '✓';
     color: rgb(207, 0, 0);
     margin-right: 8px;
     font-weight: bold;
 }
 
-.diferenciais1
+.diferenciais1, .diferenciais2
 {
-     
-    margin-left: 25px;
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
-}
-
-.diferenciais2::before {
-    content: '✓';
-    color: rgb(207, 0, 0);
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-.diferenciais2
-{
-     
-    margin-left: 25px;
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
-}
-.diferenciais2::before {
-    content: '✓';
-    color: rgb(207, 0, 0);
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-.diferenciais2
-{
-     
-    margin-left: 25px;
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
-}
-
-.diferenciais3::before {
-    content: '✓';
-    color: rgb(207, 0, 0);
-    margin-right: 8px;
-    font-weight: bold;
+    font-size: 17px;
+    width: 100%;
 }
 
 .diferenciais3
 {
-     
-    margin-left: 25px;
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
+    font-size: 17px;
+    width: 100%;
     color: white;
 }
 
-.diferenciais4
+.diferenciais4, .diferenciais5
 {
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     font-weight: 340;
-    font-size: 20px;
-}
-
-.diferenciais5
-{
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
-    font-weight: 340;
-    font-size: 20px;
+    text-align: center;
 }
 
 .diferenciais6
 {
-    display: flexbox;
-    max-width: 350px;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
     font-weight: 340;
-    font-size: 20px;
+    text-align: center;
 }
 
 .Matriculas
@@ -563,21 +378,14 @@ body
     border-color: rgb(0, 0, 0);
     border-width: 2px;
     border-radius: 70px;
-    padding: 20px 15px;
-    margin: 0;
+    padding: 12px 20px;
     font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-  
-    margin-left: 85px;
-    margin-top: 490px;
+    margin-top: auto;
 }
 
 .Matriculas1
@@ -586,21 +394,14 @@ body
     border-color: white;
     border-width: 2px;
     border-radius: 70px;
-    padding: 20px 15px;
-    margin: 0;
+    padding: 12px 20px;
     font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-  
-    margin-left: 85px;
-    margin-top: 490px;
+    margin-top: auto;
 }
 
 .Matriculas2
@@ -609,21 +410,14 @@ body
     border-color: rgb(0, 0, 0);
     border-width: 2px;
     border-radius: 70px;
-    padding: 20px 15px;
-    margin: 0;
+    padding: 12px 20px;
     font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-  
-    margin-left: 100px;
-    margin-top: 490px;
+    margin-top: auto;
 }
 
 .Matriculas3
@@ -632,63 +426,58 @@ body
     border-color: rgb(255, 255, 255);
     border-width: 2px;
     border-radius: 70px;
-    padding: 20px 15px;
-    margin: 0;
+    padding: 12px 20px;
     font-family: 'Gill Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     outline: none;
-    
-
-    display: block;
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-  
-    margin-left: 100px;
-    margin-top: 490px;
+    margin-top: auto;
 }
 
-#SP
+#SP, #Bauru, #PP
 {
     border-style: solid;
     border-radius: 20px;
     border-width: 2px;
     border-color: rgb(207, 0, 0);
+    width: 100%;
+    height: auto;
+    max-width: 280px;
 }
 
-#Bauru
+/* ===== SEÇÃO MISSÃO ===== */
+.secao-missao
 {
-    border-style: solid;
-    border-radius: 20px;
-    border-width: 2px;
-    border-color: rgb(207, 0, 0);
-}
-
-#PP
-{
-    border-style: solid;
-    border-radius: 20px;
-    border-width: 2px;
-    border-color: rgb(207, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
 }
 
 #missao
 {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
+    max-width: 900px;
 }
 
 #lutadores
 {
     opacity: 0.5;
     width: 60%;
-    height: 60%;
-    margin-left: 360px;
-    display: flex;
+    max-width: 800px;
+    height: auto;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
 }
 
 #btcentro
@@ -698,16 +487,13 @@ body
     border-width: 2px;
     border-radius: 70px;
     padding: 20px 15px;
-    margin: 0;
     font-family: 'Gill Sans', sans-serif;
     font-size: 25px;
     cursor: pointer;
     outline: none;
-
     background-color: rgb(104, 0, 0);
     color: white;
-    position: absolute; 
-  
-    margin-left: 860px;
-    margin-top: 280px;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
 }
