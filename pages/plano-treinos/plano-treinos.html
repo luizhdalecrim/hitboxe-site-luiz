@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano de Treinos - Hit-boxe</title>
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/pages/treinos.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="plano-treinos.css">
 
 </head>
 <body>
     <div class="home home--logged">
-        <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
+        <img id="logo" src="../../assets/img/logo.Hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
-            <button type="button" id="faq" onclick="window.location.href='faq.html'">FAQ</button>
+            <button type="button" id="faq" onclick="window.location.href='../faq/faq.html'">FAQ</button>
         </div>
         <div id="caixa2">
-            <button type="button" id="dashboard" onclick="window.location.href='dashboard.html'">Dashboard</button>
-            <button type="button" id="inicio" onclick="window.location.href='index.html'">Ínicio</button>
-            <button type="button" id="consultoria" onclick="window.location.href='consultoria.html'">Consultoria</button>
+            <button type="button" id="dashboard" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
+            <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Ínicio</button>
+            <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
             <button type="button" id="planos" class="ativo">Planos</button>
         </div>
         <div id="caixa3">
-            <button type="button" id="usuario" onclick="window.location.href='dashboard.html'">
-                <img src="Botao usuario.png" alt="Usuário" id="fotousuario">
+            <button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'">
+                <img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario">
             </button>
         </div>
         <div id="caixa4">
             <button type="button" id="sair" onclick="sair()">
-                <img src="botao-sair.png" alt="Sair" class="icon-button-img">
+                <img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img">
             </button>
         </div>
     </div>
@@ -49,8 +49,8 @@
 
     <script>
         const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
-        if (!usuario) window.location.href = "login.html";
-        function sair() { sessionStorage.removeItem("usuarioLogado"); window.location.href = "login.html"; }
+        if (!usuario) window.location.href = "../login/login.html";
+        function sair() { sessionStorage.removeItem("usuarioLogado"); window.location.href = "../login/login.html"; }
 
         const treinos = {
             A: { treinador:"Gustavo Alves", atualizacao:"20/05/26", exercicios:[

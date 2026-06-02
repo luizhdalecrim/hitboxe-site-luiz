@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Hit-boxe</title>
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/pages/faq.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="faq.css">
 </head>
 <body>
     <div class="home" id="nav-publico">
-        <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
+        <img id="logo" src="../../assets/img/logo.Hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
-            <button type="button" id="faq" class="ativo" onclick="window.location.href='faq.html'">FAQ</button>
+            <button type="button" id="faq" class="ativo" onclick="window.location.href='../faq/faq.html'">FAQ</button>
         </div>
         <div id="caixa2"></div>
         <div id="caixa3"></div>
@@ -70,19 +70,19 @@
 
         if (usuario) {
             c2.innerHTML = `
-                <button type="button" id="dashboard" onclick="window.location.href='dashboard.html'">Dashboard</button>
-                <button type="button" id="inicio" onclick="window.location.href='index.html'">Ínicio</button>
-                <button type="button" id="consultoria" onclick="window.location.href='consultoria.html'">Consultoria</button>
-                <button type="button" id="planos" onclick="window.location.href='plano-treinos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='dashboard.html'"><img src="Botao usuario.png" alt="Usuário" id="fotousuario"></button>`;
-            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='login.html'"><img src="botao-sair.png" alt="Sair" class="icon-button-img"></button>`;
+                <button type="button" id="dashboard" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
+                <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Ínicio</button>
+                <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
+                <button type="button" id="planos" onclick="window.location.href='../plano-treinos/plano-treinos.html'">Planos</button>`;
+            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'"><img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario"></button>`;
+            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='../login/login.html'"><img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img"></button>`;
         } else {
             c2.innerHTML = `
-                <button type="button" id="sobre" onclick="window.location.href='sobre.html'">Sobre</button>
-                <button type="button" id="inicio" onclick="window.location.href='index.html'">Ínicio</button>
-                <button type="button" id="planos" onclick="window.location.href='Planos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="cadastro" onclick="window.location.href='cadastro.html'">Cadastro</button>`;
-            c4.innerHTML = `<button type="button" id="Login" onclick="window.location.href='login.html'">Login</button>`;
+                <button type="button" id="sobre" onclick="window.location.href='../sobre/sobre.html'">Sobre</button>
+                <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Ínicio</button>
+                <button type="button" id="planos" onclick="window.location.href='../planos/planos.html'">Planos</button>`;
+            c3.innerHTML = `<button type="button" id="cadastro" onclick="window.location.href='../cadastro/cadastro.html'">Cadastro</button>`;
+            c4.innerHTML = `<button type="button" id="Login" onclick="window.location.href='../login/login.html'">Login</button>`;
         }
     </script>
 </body>
