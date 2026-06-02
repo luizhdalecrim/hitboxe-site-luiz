@@ -1,5 +1,5 @@
 /* =====================
-   MENU HITBOXE - ESTILO HITBOXE4 SEM FLEX
+   GLOBAL HITBOXE
    ===================== */
 body {
     background-color: black;
@@ -166,4 +166,49 @@ button.ativo,
 /* Spacer para compensar o menu fixo */
 .page-spacer {
     height: 64px;
+}
+
+/* Menu de páginas autenticadas */
+.home--logged #caixa3 {
+    background-color: #ab2225 !important;
+}
+
+.home--logged #caixa4 {
+    background-color: black !important;
+}
+
+/* Utilitários globais */
+.main-offset {
+    padding-top: 80px;
+}
+
+.icon-button-img {
+    width: 44px;
+    height: 44px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.link-brand {
+    color: rgb(104, 0, 0);
+}
+
+.content-offset {
+    padding-top: 64px;
+}
+
+.form-feedback {
+    display: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.form-feedback--error {
+    color: rgb(207, 0, 0);
+}
+
+.form-feedback--success {
+    color: green;
 }

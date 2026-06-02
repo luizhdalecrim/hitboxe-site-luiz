@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Hit-boxe</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="estilo-faq.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pages/faq.css">
 </head>
 <body>
     <div class="home" id="nav-publico">
@@ -74,8 +74,8 @@
                 <button type="button" id="inicio" onclick="window.location.href='index.html'">Ínicio</button>
                 <button type="button" id="consultoria" onclick="window.location.href='consultoria.html'">Consultoria</button>
                 <button type="button" id="planos" onclick="window.location.href='plano-treinos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='dashboard.html'"><img src="Botao usuario.png" id="fotousuario" style="width:44px;height:44px;border-radius:50%;"></button>`;
-            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='login.html'"><img src="botao-sair.png" style="width:44px;height:44px;"></button>`;
+            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='dashboard.html'"><img src="Botao usuario.png" alt="Usuário" id="fotousuario"></button>`;
+            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='login.html'"><img src="botao-sair.png" alt="Sair" class="icon-button-img"></button>`;
         } else {
             c2.innerHTML = `
                 <button type="button" id="sobre" onclick="window.location.href='sobre.html'">Sobre</button>

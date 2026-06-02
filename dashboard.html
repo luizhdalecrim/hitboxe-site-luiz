@@ -4,20 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Hit-boxe</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="estilo-dashboard.css">
-    <style>
-        /* Ajustes para menu logado sem flex */
-        #caixa3 {
-            background-color: #ab2225 !important;
-        }
-        #caixa4 {
-            background-color: black !important;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pages/dashboard.css">
+
 </head>
 <body>
-    <div class="home">
+    <div class="home home--logged">
         <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
             <button type="button" id="faq" onclick="window.location.href='faq.html'">FAQ</button>
@@ -35,7 +27,7 @@
         </div>
         <div id="caixa4">
             <button type="button" id="sair" onclick="sair()">
-                <img src="botao-sair.png" alt="Sair" style="width:44px;height:44px;">
+                <img src="botao-sair.png" alt="Sair" class="icon-button-img">
             </button>
         </div>
     </div>
@@ -137,8 +129,8 @@
 
         const tbody = document.getElementById("historico-body");
         historicoTreinos.forEach(t => {
-            const cor = t.status === "Concluído" ? "#1a7a1a" : "#a00000";
-            tbody.innerHTML += `<tr><td>${t.data}</td><td>${t.treino}</td><td>${t.treinador}</td><td>${t.duracao}</td><td style="color:${cor};font-weight:bold;">${t.status}</td></tr>`;
+            const statusClass = t.status === "Concluído" ? "status-cell--done" : "status-cell--missed";
+            tbody.innerHTML += `<tr><td>${t.data}</td><td>${t.treino}</td><td>${t.treinador}</td><td>${t.duracao}</td><td class="status-cell ${statusClass}">${t.status}</td></tr>`;
         });
 
         const canvas = document.getElementById("graficoEvolucao");

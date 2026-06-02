@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Hit-boxe</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="estilo-cadastro.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pages/cadastro.css">
 </head>
 <body>
     <div class="home">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="cadastro-layout" style="padding-top:80px;">
+    <div class="cadastro-layout main-offset">
         <div id="caixa5">
             <h1 id="tit">Cadastrar-se</h1>
             <h1 id="subtit">Email:</h1>
@@ -43,13 +43,13 @@
             </ul>
             <h1 id="subtit2">Confirmar senha:</h1>
             <input type="password" id="senha1" placeholder="**********"/>
-            <div id="msg-cadastro" style="font-family:Arial,sans-serif;font-size:14px;display:none;"></div>
+            <div id="msg-cadastro" class="form-feedback"></div>
             <button type="button" id="btcadastro" onclick="validarCadastro()">Cadastrar-se</button>
             <div class="checkbox-row">
                 <input type="checkbox" id="checkbox"/>
                 <p id="txtChbx">Modalidade apenas online</p>
             </div>
-            <p style="text-align:center;font-size:14px;color:#555;">Já tem conta? <a href="login.html" style="color:rgb(104,0,0);">Entrar</a></p>
+            <p class="auth-switch">Já tem conta? <a href="login.html" class="link-brand">Entrar</a></p>
         </div>
         <img src="fotocadastro.png" alt="Onde os campeões são forjados" id="fotocadastro">
     </div>

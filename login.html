@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Hit-boxe</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="estilo-login.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pages/login.css">
 </head>
 <body>
     <div class="home">
@@ -26,14 +26,14 @@
         </div>
     </div>
 
-    <div class="login-layout" style="padding-top:80px;">
+    <div class="login-layout main-offset">
         <div id="caixa5">
             <h1 id="tit">Login</h1>
             <h1 id="subtit">Email:</h1>
             <input type="email" class="email-input" id="email" placeholder="seuemail@gmail.com"/>
             <h1 id="subtit">Senha:</h1>
             <input type="password" id="senha" placeholder="**********"/>
-            <div id="erro-msg" style="color:rgb(207,0,0);font-family:Arial,sans-serif;font-size:15px;display:none;">
+            <div id="erro-msg" class="form-feedback form-feedback--error">
                 ⚠ Email ou senha incorretos.
             </div>
             <button type="button" id="btlogin" onclick="fazerLogin()">Entrar</button>
@@ -71,7 +71,7 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const hint = document.createElement("p");
-            hint.style.cssText = "color:#888;font-family:Arial,sans-serif;font-size:13px;text-align:center;margin-top:8px;";
+            hint.className = "login-hint";
             hint.innerHTML = "💡 Demo: <b>pedro@hitboxe.com</b> / <b>Hitboxe@123</b>";
             document.getElementById("caixa5").appendChild(hint);
         });
