@@ -1,0 +1,310 @@
+:root {
+    --cor-fundo: #000;
+    --cor-superficie: #111;
+    --cor-superficie-clara: #fff;
+    --cor-cinza: #464343;
+    --cor-vermelho: rgb(104, 0, 0);
+    --cor-vermelho-vivo: rgb(207, 0, 0);
+    --cor-vermelho-hover: rgb(150, 0, 0);
+    --cor-texto: #fff;
+    --cor-texto-escuro: #111;
+    --borda-padrao: 2px solid var(--cor-vermelho-vivo);
+    --raio-card: 20px;
+    --raio-pill: 100px;
+    --sombra-card: 0 18px 45px rgba(0, 0, 0, 0.28);
+    --fonte-base: Arial, sans-serif;
+    --fonte-destaque: 'Gill Sans', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-base);
+}
+
+img { max-width: 100%; }
+
+button,
+a,
+input,
+textarea { font: inherit; }
+
+button {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover { transform: translateY(-1px); }
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--cor-vermelho-vivo);
+    outline-offset: 3px;
+}
+
+#Bprincipal,
+#Matricula,
+#matricula,
+#btcentro,
+#btlogin,
+#btcadastro,
+#nvconsult,
+#TreinoA,
+#TrA,
+#TrB,
+#TrC,
+#chamado,
+.Matriculas,
+.Matriculas1,
+.Matriculas2,
+.Matriculas3,
+.btn-matricula,
+.btn-matricula-dark,
+.fundovermelho,
+.button1 {
+    background-color: var(--cor-vermelho);
+    border: 1px solid var(--cor-texto);
+    border-radius: var(--raio-pill);
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-family: var(--fonte-destaque);
+    font-weight: 600;
+    line-height: 1;
+    min-height: 42px;
+    padding: 12px 22px;
+}
+
+#Bprincipal:hover,
+#Matricula:hover,
+#matricula:hover,
+#btcentro:hover,
+#btlogin:hover,
+#btcadastro:hover,
+#nvconsult:hover,
+#TreinoA:hover,
+#TrA:hover,
+#TrB:hover,
+#TrC:hover,
+#chamado:hover,
+.Matriculas:hover,
+.Matriculas1:hover,
+.Matriculas2:hover,
+.Matriculas3:hover,
+.btn-matricula:hover,
+.btn-matricula-dark:hover,
+.fundovermelho:hover,
+.button1:hover {
+    background-color: var(--cor-vermelho-hover);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea,
+#textbox {
+    border: 2px solid #222;
+    border-radius: 12px;
+    min-height: 42px;
+    padding: 10px 12px;
+}
+
+#caixa5,
+#caixa6,
+#caixa7,
+#caixa8,
+.plano-card,
+.caixas1,
+.caixas2,
+.caixas3,
+.faq-item,
+.card-resumo {
+    box-shadow: var(--sombra-card);
+}
+
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    margin-top: 56px;
+    padding: 30px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.95));
+}
+
+.site-footer__brand {
+    color: var(--cor-texto);
+    font-family: var(--fonte-destaque);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.site-footer__text {
+    color: #cfcfcf;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.site-footer__links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer__links a:hover { color: var(--cor-vermelho-vivo); }
+
+@media (max-width: 760px) {
+    .site-footer { margin-top: 36px; }
+
+    #Bprincipal,
+    #Matricula,
+    #matricula,
+    #btcentro,
+    #btlogin,
+    #btcadastro,
+    #nvconsult,
+    #TreinoA,
+    #TrA,
+    #TrB,
+    #TrC,
+    #chamado,
+    .Matriculas,
+    .Matriculas1,
+    .Matriculas2,
+    .Matriculas3,
+    .btn-matricula,
+    .btn-matricula-dark,
+    .fundovermelho,
+    .button1 {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.home--app #caixa3 {
+    background-color: #ab2225;
+}
+
+.home--app #caixa4 {
+    background-color: #000;
+}
+
+.icone-sair {
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+}
+
+.form-page-layout {
+    padding-top: 80px;
+}
+
+.auth-message {
+    color: var(--cor-vermelho-vivo);
+    display: none;
+    font-family: var(--fonte-base);
+    font-size: 14px;
+}
+
+.auth-message--erro {
+    font-size: 15px;
+}
+
+.form-link-text {
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form-link-text a {
+    color: var(--cor-vermelho);
+    font-weight: 700;
+}
+
+.imagem-sede {
+    height: auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+.preco-gratis--muted {
+    color: #aaa;
+}
+
+#btn-voltar-treinos,
+#TrD,
+#TrE {
+    background-color: var(--cor-vermelho);
+    border: 1px solid var(--cor-texto);
+    border-radius: var(--raio-pill);
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-family: var(--fonte-destaque);
+    font-size: 18px;
+    padding: 12px 24px;
+}
+
+#btn-voltar-treinos:hover,
+#TrD:hover,
+#TrE:hover {
+    background-color: var(--cor-vermelho-hover);
+}
+
+.app-page-content {
+    padding-top: 64px;
+}
+
+.consult-message {
+    color: green;
+    display: none;
+    font-family: var(--fonte-base);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.consult-empty {
+    color: #888;
+    font-family: var(--fonte-base);
+    font-size: 15px;
+}
+
+.consult-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.consult-card__texto {
+    color: #333;
+    font-family: var(--fonte-base);
+    font-size: 14px;
+    margin: 0;
+}
+
+.consult-card__data {
+    color: #888;
+    font-family: var(--fonte-base);
+    font-size: 12px;
+    margin: 4px 0 0;
+}
+
+.status-concluido,
+.status-faltou {
+    font-weight: 700;
+}
+
+.status-concluido { color: #1a7a1a; }
+.status-faltou { color: #a00000; }

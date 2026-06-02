@@ -6,6 +6,7 @@
     <title>Cadastro - Hit-boxe</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="estilo-cadastro.css">
+    <link rel="stylesheet" href="estilo-global.css">
 </head>
 <body>
     <div class="home">
@@ -26,7 +27,7 @@
         </div>
     </div>
 
-    <div class="cadastro-layout" style="padding-top:80px;">
+    <div class="cadastro-layout form-page-layout">
         <div id="caixa5">
             <h1 id="tit">Cadastrar-se</h1>
             <h1 id="subtit">Email:</h1>
@@ -43,16 +44,27 @@
             </ul>
             <h1 id="subtit2">Confirmar senha:</h1>
             <input type="password" id="senha1" placeholder="**********"/>
-            <div id="msg-cadastro" style="font-family:Arial,sans-serif;font-size:14px;display:none;"></div>
+            <div id="msg-cadastro" class="auth-message"></div>
             <button type="button" id="btcadastro" onclick="validarCadastro()">Cadastrar-se</button>
             <div class="checkbox-row">
                 <input type="checkbox" id="checkbox"/>
                 <p id="txtChbx">Modalidade apenas online</p>
             </div>
-            <p style="text-align:center;font-size:14px;color:#555;">Já tem conta? <a href="login.html" style="color:rgb(104,0,0);">Entrar</a></p>
+            <p class="form-link-text">Já tem conta? <a href="login.html">Entrar</a></p>
         </div>
         <img src="fotocadastro.png" alt="Onde os campeões são forjados" id="fotocadastro">
     </div>
+
+    <footer class="site-footer">
+        <p class="site-footer__brand">Hitboxe</p>
+        <p class="site-footer__text">Treinos personalizados, acompanhamento de evolução e consultoria para cada fase do seu round.</p>
+        <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="Planos.html">Planos</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </footer>
 
     <script>
         function validarCadastro() {

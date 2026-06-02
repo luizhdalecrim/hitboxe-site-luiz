@@ -1,226 +1,119 @@
-body { background-color: black; margin: 0; padding: 0; }
-
-/* ===== NAVBAR ===== */
-.home {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    padding: 10px 20px;
-    z-index: 1000;
-    gap: 12px;
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
 }
 
-#logo { width: 60px; height: auto; flex-shrink: 0; }
-
-#caixa1 {
-    background-color: #464343;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+#rolagem {
+    margin-top: 80px;
 }
 
-#caixa2 {
-    background-color: rgb(0,0,0);
-    border: 1px solid white;
-    padding: 8px 16px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex: 1;
-}
-
-#caixa3 {
-    background-color: rgb(0,0,0);
-    border: 1px solid white;
-    padding: 8px 16px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-#caixa4 {
-    border: 1px solid white;
-    background-color: rgb(104,0,0);
-    padding: 8px 16px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-#Login, #cadastro, #sobre, #inicio, #faq {
-    background: none;
-    border: none;
-    padding: 5px 10px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-    color: white;
-}
-
-/* Página ativa */
-#planos {
-    border: 1px solid white;
-    border-radius: 100px;
-    padding: 5px 16px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 18px;
-    cursor: pointer;
-    color: white;
-    outline: none;
-    background-color: rgb(104,0,0);
-}
-
-#Login { background-color: rgb(104,0,0); border-radius: 100px; }
-
-#faq {
-    background-color: #464343;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    width: 100%;
-    height: 100%;
-}
-
-/* ===== HERO PLANOS ===== */
+/* ===================== HERO PLANOS ===================== */
 .hero-planos {
-    position: relative;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 100px 80px 60px 80px;
+    min-height: 60vh;
     overflow: hidden;
+    padding: 20px 40px 40px;
+    position: relative;
+    text-align: center;
 }
 
 #hero-img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
     position: absolute;
-    top: 60px;
     right: 0;
-    width: 65%;
-    height: auto;
-    opacity: 0.25;
+    top: 0;
+    width: 55%;
     z-index: 0;
-    pointer-events: none;
 }
 
 .hero-texto {
+    max-width: 550px;
     position: relative;
+    text-align: left;
     z-index: 1;
-    max-width: 600px;
 }
 
 #tit-hero {
-    color: white;
+    color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 50px;
+    font-size: 46px;
     font-weight: 100;
+    margin: 0 0 20px;
     text-decoration: underline;
-    margin: 0 0 20px 0;
 }
 
-.hero-bloco {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+#subtit-hero1,
+#subtit-hero2 {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
 }
 
 #subtit-hero1 {
-    color: white;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 42px;
-    font-weight: 100;
+    font-size: 34px;
+    line-height: 1.25;
     margin: 0;
-    line-height: 1.2;
-}
-
-#vitoria-img {
-    max-width: 420px;
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
 }
 
 #subtit-hero2 {
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 100;
-    margin: 10px 0 0 0;
-    max-width: 480px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* ===== SEÇÕES DE PLANO ===== */
+#vitoria-img {
+    display: block;
+    height: auto;
+    margin: 8px 0;
+    max-width: 350px;
+    width: 100%;
+}
+
+/* ===================== CARDS DE PLANOS ===================== */
 .secao-plano {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    padding: 60px 40px;
     flex-wrap: wrap;
-}
-
-.secao-invertida {
-    flex-direction: row-reverse;
+    gap: 0;
+    justify-content: center;
+    padding: 50px 40px;
 }
 
 .plano-foto {
-    width: 45%;
-    max-width: 600px;
+    flex-shrink: 0;
     height: auto;
+    max-width: 540px;
     object-fit: cover;
     opacity: 0.85;
-    flex-shrink: 0;
+    width: 42%;
 }
 
-#foto-round { border-radius: 0 20px 20px 0; }
-#foto-professional { border-radius: 20px 0 0 20px; }
-#foto-nocaute { border-radius: 0 20px 20px 0; opacity: 0.5; }
-
-/* ===== CARD DO PLANO ===== */
 .plano-card {
-    background-color: rgb(255,255,255);
-    border: 2px solid rgb(207,0,0);
+    background-color: #fff;
+    border: 2px solid rgb(207, 0, 0);
     border-radius: 20px;
-    padding: 30px 36px;
-    max-width: 680px;
-    flex: 1;
-    min-width: 320px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 16px;
+    max-width: 680px;
+    min-width: 320px;
+    padding: 30px 36px;
 }
 
 .plano-card-dark {
-    background-color: rgb(0,0,0);
-    border: 2px solid rgb(207,0,0);
-    color: white;
+    background-color: #000;
+    color: #fff;
 }
 
-/* ===== HEADER DO CARD ===== */
-.plano-header {
+.plano-header-left {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    gap: 18px;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
 }
 
 .plano-icone {
@@ -229,97 +122,106 @@ body { background-color: black; margin: 0; padding: 0; }
 }
 
 .plano-preco-bloco {
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
 .preco-antigo {
+    color: #888;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    color: #888;
     text-decoration: line-through;
 }
 
 .preco-destaque {
+    background-color: rgb(180, 0, 0);
+    border-radius: 100px;
+    color: #fff;
     font-family: Arial, sans-serif;
     font-size: 32px;
     font-weight: bold;
-    color: white;
-    background-color: rgb(180,0,0);
     padding: 6px 18px;
-    border-radius: 100px;
 }
 
 .preco-gratis {
+    color: #666;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    color: #666;
     margin-top: 4px;
 }
 
-.plano-card-dark .preco-gratis { color: #aaa; }
-
-/* ===== SEPARADOR ===== */
 .separador {
     border: none;
-    border-top: 1px solid rgb(207,0,0);
+    border-top: 1px solid rgb(207, 0, 0);
     margin: 4px 0;
 }
 
-.separador-dark { border-top: 1px solid rgb(207,0,0); }
-
-/* ===== LISTA DE BENEFÍCIOS ===== */
 .plano-lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .plano-lista li {
+    color: rgb(30, 30, 30);
     font-family: Arial, sans-serif;
     font-size: 17px;
-    color: rgb(30,30,30);
+    line-height: 1.4;
     padding-left: 28px;
     position: relative;
-    line-height: 1.4;
 }
 
 .plano-lista li::before {
+    color: rgb(207, 0, 0);
     content: '✓';
-    color: rgb(207,0,0);
     font-weight: bold;
-    position: absolute;
     left: 0;
+    position: absolute;
     top: 0;
 }
 
 .plano-lista-dark li {
-    color: white;
+    color: #fff;
 }
 
-/* ===== BOTÃO MATRICULAR ===== */
 .btn-matricula {
-    border: 2px solid black;
-    border-radius: 100px;
-    padding: 14px 28px;
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 22px;
-    cursor: pointer;
-    outline: none;
-    background-color: rgb(104,0,0);
-    color: white;
     align-self: center;
+    font-size: 22px;
     margin-top: 8px;
+    padding: 14px 28px;
 }
 
-.btn-matricula-dark {
-    border-color: white;
-}
+@media (max-width: 760px) {
+    #rolagem {
+        margin-top: 24px;
+    }
 
-.btn-matricula:hover {
-    background-color: rgb(150,0,0);
+    .hero-planos,
+    .secao-plano {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #hero-img {
+        opacity: 0.12;
+        width: 100%;
+    }
+
+    .plano-foto,
+    .plano-card {
+        width: 100%;
+    }
+
+    .plano-header-left {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plano-preco-bloco {
+        align-items: flex-start;
+    }
 }

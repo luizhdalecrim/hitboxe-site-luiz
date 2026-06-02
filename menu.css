@@ -167,3 +167,91 @@ button.ativo,
 .page-spacer {
     height: 64px;
 }
+
+/* =====================
+   PADRONIZAÇÃO RESPONSIVA DO MENU
+   ===================== */
+.home {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#logo {
+    width: 52px;
+}
+
+#caixa1,
+#caixa2,
+#caixa3,
+#caixa4 {
+    min-height: 44px;
+}
+
+#faq,
+#sobre,
+#inicio,
+#planos,
+#cadastro,
+#dashboard,
+#consultoria,
+#Login {
+    border-radius: 100px;
+    min-height: 30px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#faq:hover,
+#sobre:hover,
+#inicio:hover,
+#planos:hover,
+#cadastro:hover,
+#dashboard:hover,
+#consultoria:hover,
+#Login:hover {
+    background-color: rgb(104, 0, 0);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .home {
+        height: auto;
+        min-height: 64px;
+        padding: 8px 12px;
+        position: sticky;
+    }
+
+    #logo,
+    #caixa1,
+    #caixa2,
+    #caixa3,
+    #caixa4 {
+        position: static;
+        transform: none;
+    }
+
+    #logo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    #caixa1,
+    #caixa2,
+    #caixa3,
+    #caixa4 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4px;
+        vertical-align: middle;
+    }
+
+    #caixa2 {
+        max-width: calc(100% - 24px);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .page-spacer {
+        height: 24px;
+    }
+}

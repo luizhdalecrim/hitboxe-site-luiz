@@ -6,6 +6,7 @@
     <title>Login - Hit-boxe</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="estilo-login.css">
+    <link rel="stylesheet" href="estilo-global.css">
 </head>
 <body>
     <div class="home">
@@ -26,14 +27,14 @@
         </div>
     </div>
 
-    <div class="login-layout" style="padding-top:80px;">
+    <div class="login-layout form-page-layout">
         <div id="caixa5">
             <h1 id="tit">Login</h1>
             <h1 id="subtit">Email:</h1>
             <input type="email" class="email-input" id="email" placeholder="seuemail@gmail.com"/>
             <h1 id="subtit">Senha:</h1>
             <input type="password" id="senha" placeholder="**********"/>
-            <div id="erro-msg" style="color:rgb(207,0,0);font-family:Arial,sans-serif;font-size:15px;display:none;">
+            <div id="erro-msg" class="auth-message auth-message--erro">
                 ⚠ Email ou senha incorretos.
             </div>
             <button type="button" id="btlogin" onclick="fazerLogin()">Entrar</button>
@@ -42,6 +43,17 @@
         </div>
         <img src="fotologin.png" alt="Cada Round 1 vencedor." id="fotologin">
     </div>
+
+    <footer class="site-footer">
+        <p class="site-footer__brand">Hitboxe</p>
+        <p class="site-footer__text">Treinos personalizados, acompanhamento de evolução e consultoria para cada fase do seu round.</p>
+        <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="Planos.html">Planos</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </footer>
 
     <script>
         const USUARIOS = [

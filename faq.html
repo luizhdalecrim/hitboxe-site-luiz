@@ -6,6 +6,7 @@
     <title>FAQ - Hit-boxe</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="estilo-faq.css">
+    <link rel="stylesheet" href="estilo-global.css">
 </head>
 <body>
     <div class="home" id="nav-publico">
@@ -55,6 +56,17 @@
         <button type="button" id="chamado" onclick="alert('Chamado aberto! Nossa equipe entrará em contato em até 24h.')">Abrir Chamado</button>
     </div>
 
+    <footer class="site-footer">
+        <p class="site-footer__brand">Hitboxe</p>
+        <p class="site-footer__text">Treinos personalizados, acompanhamento de evolução e consultoria para cada fase do seu round.</p>
+        <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="Planos.html">Planos</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </footer>
+
     <script>
         function toggleFaq(el) {
             const resp = el.nextElementSibling;
@@ -74,8 +86,8 @@
                 <button type="button" id="inicio" onclick="window.location.href='index.html'">Ínicio</button>
                 <button type="button" id="consultoria" onclick="window.location.href='consultoria.html'">Consultoria</button>
                 <button type="button" id="planos" onclick="window.location.href='plano-treinos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='dashboard.html'"><img src="Botao usuario.png" id="fotousuario" style="width:44px;height:44px;border-radius:50%;"></button>`;
-            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='login.html'"><img src="botao-sair.png" style="width:44px;height:44px;"></button>`;
+            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='dashboard.html'"><img src="Botao usuario.png" id="fotousuario" alt="Usuário"></button>`;
+            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='login.html'"><img src="botao-sair.png" alt="Sair" class="icone-sair"></button>`;
         } else {
             c2.innerHTML = `
                 <button type="button" id="sobre" onclick="window.location.href='sobre.html'">Sobre</button>

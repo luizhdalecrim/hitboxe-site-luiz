@@ -6,18 +6,10 @@
     <title>Dashboard - Hit-boxe</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="estilo-dashboard.css">
-    <style>
-        /* Ajustes para menu logado sem flex */
-        #caixa3 {
-            background-color: #ab2225 !important;
-        }
-        #caixa4 {
-            background-color: black !important;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo-global.css">
 </head>
 <body>
-    <div class="home">
+    <div class="home home--app">
         <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
             <button type="button" id="faq" onclick="window.location.href='faq.html'">FAQ</button>
@@ -35,7 +27,7 @@
         </div>
         <div id="caixa4">
             <button type="button" id="sair" onclick="sair()">
-                <img src="botao-sair.png" alt="Sair" style="width:44px;height:44px;">
+                <img src="botao-sair.png" alt="Sair" class="icone-sair">
             </button>
         </div>
     </div>
@@ -113,6 +105,17 @@
         </div>
     </div>
 
+    <footer class="site-footer">
+        <p class="site-footer__brand">Hitboxe</p>
+        <p class="site-footer__text">Acompanhe seus treinos, evolução e consultorias em uma plataforma única.</p>
+        <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="plano-treinos.html">Planos</a>
+            <a href="consultoria.html">Consultoria</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </footer>
+
     <script>
         const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
         if (!usuario) {
@@ -137,8 +140,8 @@
 
         const tbody = document.getElementById("historico-body");
         historicoTreinos.forEach(t => {
-            const cor = t.status === "Concluído" ? "#1a7a1a" : "#a00000";
-            tbody.innerHTML += `<tr><td>${t.data}</td><td>${t.treino}</td><td>${t.treinador}</td><td>${t.duracao}</td><td style="color:${cor};font-weight:bold;">${t.status}</td></tr>`;
+            const classeStatus = t.status === "Concluído" ? "status-concluido" : "status-faltou";
+            tbody.innerHTML += `<tr><td>${t.data}</td><td>${t.treino}</td><td>${t.treinador}</td><td>${t.duracao}</td><td class="${classeStatus}">${t.status}</td></tr>`;
         });
 
         const canvas = document.getElementById("graficoEvolucao");

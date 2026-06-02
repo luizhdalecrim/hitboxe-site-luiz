@@ -6,13 +6,10 @@
     <title>Plano A - Hit-boxe</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="estilo-plano-a.css">
-    <style>
-        #caixa3 { background-color: #ab2225 !important; }
-        #caixa4 { background-color: black !important; }
-    </style>
+    <link rel="stylesheet" href="estilo-global.css">
 </head>
 <body>
-    <div class="home">
+    <div class="home home--app">
         <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
             <button type="button" id="faq" onclick="window.location.href='faq.html'">FAQ</button>
@@ -30,7 +27,7 @@
         </div>
         <div id="caixa4">
             <button type="button" id="sair" onclick="sair()">
-                <img src="botao-sair.png" alt="Sair" style="width:44px;height:44px;">
+                <img src="botao-sair.png" alt="Sair" class="icone-sair">
             </button>
         </div>
     </div>
@@ -52,12 +49,22 @@
         <div id="caixa6">
             <h1 id="txt">Calistenia (flexões, abdominais, agachamentos) ou HIIT/Pliometria.</h1>
             <br>
-            <button type="button" onclick="window.location.href='plano-treinos.html'"
-                style="background:rgb(104,0,0);color:white;border:none;border-radius:20px;padding:12px 24px;font-size:18px;cursor:pointer;font-family:'Gill Sans',sans-serif;">
+            <button type="button" id="btn-voltar-treinos" onclick="window.location.href='plano-treinos.html'">
                 ← Ver todos os treinos
             </button>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <p class="site-footer__brand">Hitboxe</p>
+        <p class="site-footer__text">Acompanhe seus treinos, evolução e consultorias em uma plataforma única.</p>
+        <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="plano-treinos.html">Planos</a>
+            <a href="consultoria.html">Consultoria</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </footer>
 
     <script>
         const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
