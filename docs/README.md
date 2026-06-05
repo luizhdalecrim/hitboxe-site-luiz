@@ -17,7 +17,7 @@
 
 ## 📋 Sobre o Projeto
 
-O **Hitboxe** é um site institucional fictício para uma academia de boxe, criado pelo **Grupo 7 (Turma A)** da disciplina de **PCW (Programação para Client-Side Web)** e **PI (Projeto Integrador)**, no **1º Termo do curso de Análise e Desenvolvimento de Sistemas (ADS)** da **FIPP/Unoeste — 2026**.
+O **Hitboxe** é um site institucional fictício para uma academia de boxe, criado pelo **Grupo 7 (Turma A)** da disciplina de **PCW (Padrões para Conteúdos Web)** e **PI (Projeto Integrador)**, no **1º Termo do curso de Análise e Desenvolvimento de Sistemas (ADS)** da **FIPP/Unoeste — 2026**.
 
 O projeto simula um produto real desenvolvido pela empresa fictícia **NeoSys Consultoria de TI**, exercitando na prática os conteúdos de desenvolvimento front-end com HTML e CSS.
 
