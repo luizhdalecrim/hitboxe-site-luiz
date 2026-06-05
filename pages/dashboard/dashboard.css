@@ -1,20 +1,3 @@
-body { background-color: black; margin: 0; padding: 0; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .dashboard-layout { display: flex; flex-direction: column; padding: 20px 40px; gap: 20px; align-items: center; }
 .linha-caixas { display: flex; flex-direction: row; gap: 20px; width: 100%; flex-wrap: wrap; justify-content: center; }
 
@@ -111,3 +94,19 @@ body { background-color: black; margin: 0; padding: 0; }
     border-bottom: 1px solid #eee;
 }
 .tabela-historico tr:last-child td { border-bottom: none; }
+
+.status-cell {
+    font-weight: bold;
+}
+
+.status-cell--done {
+    color: green;
+}
+
+.status-cell--pending {
+    color: orange;
+}
+
+.status-cell--missed {
+    color: #a00000;
+}

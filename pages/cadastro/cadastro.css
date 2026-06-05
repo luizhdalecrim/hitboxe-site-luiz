@@ -1,17 +1,4 @@
-body { background-color: black; margin: 0; padding: 0; }
-
-
-
-
-
-
-
-
-
-
-
-/* LAYOUT LOGIN */
-.login-layout {
+.cadastro-layout {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,27 +11,26 @@ body { background-color: black; margin: 0; padding: 0; }
 #caixa5 {
     background-color: rgb(255,255,255);
     border: 2px solid rgb(207,0,0);
-    width: 400px;
+    width: 420px;
     padding: 30px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
-#fotologin {
+#fotocadastro {
     width: 380px;
     height: auto;
     border: solid 4px rgb(207,0,0);
     border-radius: 30px;
-    flex-shrink: 0;
     align-self: flex-start;
 }
 
 #tit { font-family: Arial, sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
-#subtit { font-family: Arial, sans-serif; font-weight: 100; font-size: 22px; margin: 0; }
+#subtit, #subtit2 { font-family: Arial, sans-serif; font-weight: 100; font-size: 20px; margin: 0; }
 
-.email-input, #senha {
+.email-input, #senha, #senha1 {
     width: 100%;
     padding: 8px;
     border-radius: 10px;
@@ -52,7 +38,10 @@ body { background-color: black; margin: 0; padding: 0; }
     box-sizing: border-box;
 }
 
-#btlogin {
+#obrigatoriedades { font-family: Arial, sans-serif; font-size: 16px; margin: 4px 0; padding-left: 16px; }
+#tit2 { font-size: 18px; margin: 0 0 4px 0; }
+
+#btcadastro {
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px 20px;
@@ -66,12 +55,17 @@ body { background-color: black; margin: 0; padding: 0; }
     margin-top: 10px;
 }
 
-#cadastro1, #trocarsenha {
-    background-color: rgb(255,255,255);
-    color: rgb(80,80,80);
-    border: none;
-    cursor: pointer;
-    align-self: center;
+.checkbox-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
-#cadastro1 { font-size: 22px; }
-#trocarsenha { font-size: 17px; }
+
+#txtChbx { font-family: Arial, sans-serif; font-size: 17px; font-weight: 100; }
+
+.auth-switch {
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+}
