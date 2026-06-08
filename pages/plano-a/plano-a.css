@@ -1,0 +1,82 @@
+body { background-color: black; margin: 0; padding: 0; padding-top: 64px; }
+
+#tit { font-family: Arial, sans-serif; font-weight: 100; margin-top: 30px; text-decoration: underline; font-size: 40px; color: white; text-align: center; }
+
+.plano-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Coluna de navegação de treinos */
+.nav-treinos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-shrink: 0;
+    width: 220px;
+}
+
+#TrA, #TrB, #TrC, #TrD, #TrE {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 16px 10px;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    background-color: rgb(104,0,0);
+    color: white;
+}
+
+/* Caixa principal conteúdo */
+#caixa5 {
+    background-color: rgb(255,255,255);
+    border: 2px solid rgb(207,0,0);
+    flex: 1;
+    min-width: 300px;
+    min-height: 560px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#caixa6 {
+    background-color: rgb(92,92,92);
+    padding: 16px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+#tit1 { font-family: Arial, sans-serif; font-size: 24px; margin: 0; color: black; }
+
+#subtit { font-family: Arial, sans-serif; font-size: 22px; margin: 0; margin-left: 10px; }
+#subtitbld { font-family: Arial, sans-serif; font-size: 22px; }
+#subtitbld1 { font-family: Arial, sans-serif; font-size: 22px; }
+hr { width: 100%; border: solid 1px black; }
+
+#txt { font-family: Arial, sans-serif; font-size: 16px; font-weight: 100; margin: 0; }
+
+.back-button {
+    background: rgb(104, 0, 0);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 18px;
+    padding: 12px 24px;
+}

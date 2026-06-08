@@ -4,242 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema-Hitboxe</title>
-    <link rel="stylesheet" href="menu.css">
-    <style>
-        /* ===================== HERO ===================== */
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="pages/home/home.css">
 
-        #logo1 {
-            position: absolute;
-            right: 0;
-            top: 64px;
-            width: 65%;
-            height: calc(100vh - 64px);
-            object-fit: cover;
-            filter: grayscale(70%);
-        }
-
-        #logo2 {
-            position: absolute;
-            width: 40%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #texto-logo {
-            position: absolute;
-            top: 62%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 32px;
-            font-family: Arial, sans-serif;
-            white-space: nowrap;
-            margin: 0;
-        }
-
-        #Bprincipal {
-            position: absolute;
-            top: 72%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(104, 0, 0);
-            border: 1px solid white;
-            border-radius: 100px;
-            color: white;
-            font-family: 'Gill Sans', sans-serif;
-            font-size: 20px;
-            padding: 16px 24px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        /* ===================== DIFERENCIAIS ===================== */
-        .Tit {
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            font-size: 46px;
-            text-decoration: underline;
-            font-weight: 100;
-            margin: 40px 0 20px 0;
-        }
-
-        .secao-diferenciais {
-            text-align: center;
-            padding: 20px 40px 60px 40px;
-        }
-
-        .secao-diferenciais-inner {
-            display: inline-block;
-            vertical-align: top;
-        }
-
-        #caixa5 {
-            background-color: rgb(255, 255, 255);
-            border: 2px solid rgb(207, 0, 0);
-            width: 400px;
-            padding: 20px 20px 20px 10px;
-            border-radius: 20px;
-            display: inline-block;
-            vertical-align: middle;
-            text-align: left;
-        }
-
-        .diferenciais::before {
-            content: '✓';
-            color: rgb(207, 0, 0);
-            margin-right: 8px;
-            font-weight: bold;
-        }
-
-        .diferenciais {
-            margin-left: 20px;
-            font-size: 20px;
-            color: black;
-        }
-
-        #chines {
-            width: 400px;
-            height: 380px;
-            border-radius: 20px;
-            border: 2px solid rgb(207, 0, 0);
-            object-fit: cover;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 60px;
-        }
-
-        /* ===================== PLANOS ===================== */
-        .secao-planos {
-            text-align: center;
-            padding: 20px 40px 80px 40px;
-        }
-
-        .caixas1, .caixas2 {
-            background-color: rgb(255, 255, 255);
-            border: 2px solid rgb(207, 0, 0);
-            width: 300px;
-            padding: 16px;
-            border-radius: 20px;
-            display: inline-block;
-            vertical-align: top;
-            text-align: left;
-            margin: 10px;
-            box-sizing: border-box;
-        }
-
-        .caixas3 {
-            background-color: rgb(0, 0, 0);
-            border: 2px solid rgb(207, 0, 0);
-            width: 300px;
-            padding: 16px;
-            border-radius: 20px;
-            display: inline-block;
-            vertical-align: top;
-            text-align: left;
-            margin: 10px;
-            box-sizing: border-box;
-        }
-
-        #plano-round, #plano-professional, #plano-nocaute {
-            width: 90%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .diferenciais1::before, .diferenciais2::before {
-            content: '✓';
-            color: rgb(207, 0, 0);
-            margin-right: 8px;
-            font-weight: bold;
-        }
-
-        .diferenciais1, .diferenciais2 {
-            margin-left: 10px;
-            font-size: 16px;
-            color: black;
-        }
-
-        .diferenciais3::before {
-            content: '✓';
-            color: rgb(207, 0, 0);
-            margin-right: 8px;
-            font-weight: bold;
-        }
-
-        .diferenciais3 {
-            margin-left: 10px;
-            font-size: 16px;
-            color: white;
-        }
-
-        .Matriculas {
-            background-color: rgb(104, 0, 0);
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 70px;
-            color: white;
-            font-family: 'Gill Sans', sans-serif;
-            font-size: 18px;
-            padding: 12px 20px;
-            cursor: pointer;
-            outline: none;
-            display: block;
-            margin: 14px auto 0 auto;
-        }
-
-        .Matriculas1 {
-            background-color: rgb(104, 0, 0);
-            border: 1px solid white;
-            border-radius: 70px;
-            color: white;
-            font-family: 'Gill Sans', sans-serif;
-            font-size: 18px;
-            padding: 12px 20px;
-            cursor: pointer;
-            outline: none;
-            display: block;
-            margin: 14px auto 0 auto;
-        }
-    </style>
 </head>
 <body>
 
     <div class="home">
-        <img id="logo" src="logo.Hitboxe.png" alt="logo Hitboxe">
+        <img id="logo" src="assets/img/logos/logo-hitboxe.png" alt="logo Hitboxe">
 
         <div id="caixa1">
-            <button type="button" id="faq" onclick="location.href='faq.html'">FAQ</button>
+            <button type="button" id="faq" onclick="location.href='pages/faq/faq.html'">FAQ</button>
         </div>
 
         <div id="caixa2">
-            <button type="button" id="sobre" onclick="location.href='sobre.html'">Sobre</button>
+            <button type="button" id="sobre" onclick="location.href='pages/sobre/sobre.html'">Sobre</button>
             <button type="button" id="inicio" class="ativo">Ínicio</button>
-            <button type="button" id="planos" onclick="location.href='Planos.html'">Planos</button>
+            <button type="button" id="planos" onclick="location.href='pages/planos/planos.html'">Planos</button>
         </div>
 
         <div id="caixa3">
-            <button type="button" id="cadastro" onclick="location.href='cadastro.html'">Cadastro</button>
+            <button type="button" id="cadastro" onclick="location.href='pages/cadastro/cadastro.html'">Cadastro</button>
         </div>
 
         <div id="caixa4">
-            <button type="button" id="Login" onclick="location.href='login.html'">Login</button>
+            <button type="button" id="Login" onclick="location.href='pages/login/login.html'">Login</button>
         </div>
     </div>
 
     <!-- HERO -->
     <div class="container">
-        <img id="logo1" src="img/pessoas/boxeador-hero.png" alt="foto tela inicial">
-        <img id="logo2" src="img/logos/logo-principal.png" alt="logo principal hitboxe">
+        <img id="logo1" src="assets/img/pessoas/boxeador-hero.png" alt="foto tela inicial">
+        <img id="logo2" src="assets/img/logos/logo-principal.png" alt="logo principal hitboxe">
         <h1 id="texto-logo">Cada round, um campeão</h1>
-        <button type="button" id="Bprincipal" onclick="location.href='cadastro.html'">Iniciar Evolução</button>
+        <button type="button" id="Bprincipal" onclick="location.href='pages/cadastro/cadastro.html'">Iniciar Evolução</button>
     </div>
 
     <!-- DIFERENCIAIS -->
@@ -252,7 +50,7 @@
             <p class="diferenciais"><b>Histórico de frequência e avaliações</b></p>
             <p class="diferenciais"><b>Consultoria com profissionais da área</b></p>
         </div>
-        <img src="img/pessoas/atleta-diferenciais.png" alt="atleta diferenciais" id="chines">
+        <img src="assets/img/pessoas/atleta-diferenciais.png" alt="atleta diferenciais" id="chines">
     </div>
 
     <!-- PLANOS -->
@@ -260,30 +58,30 @@
 
     <div class="secao-planos">
         <div class="caixas1">
-            <img src="img/planos/plano-round.png" alt="Plano Round" id="plano-round">
+            <img src="assets/img/planos/plano-round.png" alt="Plano Round" id="plano-round">
             <p class="diferenciais1"><b>Plano Personalizado Atualizado Semestralmente</b></p>
             <p class="diferenciais1"><b>Acompanhamento de Evolução</b></p>
             <p class="diferenciais1"><b>2 Avaliações de habilidades por mês</b></p>
             <p class="diferenciais1"><b>2 Aulas por semana</b></p>
-            <button type="button" class="Matriculas" onclick="location.href='cadastro.html'">Matricule-se</button>
+            <button type="button" class="Matriculas" onclick="location.href='pages/cadastro/cadastro.html'">Matricule-se</button>
         </div>
 
         <div class="caixas2">
-            <img src="img/planos/plano-professional.png" alt="Plano Professional" id="plano-professional">
+            <img src="assets/img/planos/plano-professional.png" alt="Plano Professional" id="plano-professional">
             <p class="diferenciais2"><b>Plano Personalizado Atualizado Semestralmente</b></p>
             <p class="diferenciais2"><b>Acompanhamento de Evolução</b></p>
             <p class="diferenciais2"><b>2 Avaliações de habilidades por mês</b></p>
             <p class="diferenciais2"><b>2 Aulas por semana</b></p>
-            <button type="button" class="Matriculas" onclick="location.href='cadastro.html'">Matricule-se</button>
+            <button type="button" class="Matriculas" onclick="location.href='pages/cadastro/cadastro.html'">Matricule-se</button>
         </div>
 
         <div class="caixas3">
-            <img src="img/planos/plano-nocaute.png" alt="Plano Nocaute" id="plano-nocaute">
+            <img src="assets/img/planos/plano-nocaute.png" alt="Plano Nocaute" id="plano-nocaute">
             <p class="diferenciais3"><b>Plano Personalizado Atualizado Semestralmente</b></p>
             <p class="diferenciais3"><b>Acompanhamento de Evolução</b></p>
             <p class="diferenciais3"><b>2 Avaliações de habilidades por mês</b></p>
             <p class="diferenciais3"><b>2 Aulas por semana</b></p>
-            <button type="button" class="Matriculas1" onclick="location.href='cadastro.html'">Matricule-se</button>
+            <button type="button" class="Matriculas1" onclick="location.href='pages/cadastro/cadastro.html'">Matricule-se</button>
         </div>
     </div>
 
