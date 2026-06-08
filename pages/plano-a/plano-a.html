@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano A - Hit-boxe</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="plano-a.css">
+
+</head>
+<body>
+    <div class="home home--logged">
+        <img id="logo" src="../../assets/img/logos/logo-hitboxe.png" alt="logo Hitboxe">
+        <div id="caixa1">
+            <button type="button" id="faq" onclick="window.location.href='../faq/faq.html'">FAQ</button>
+        </div>
+        <div id="caixa2">
+            <button type="button" id="dashboard" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
+            <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Ínicio</button>
+            <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
+            <button type="button" id="planos" class="ativo" onclick="window.location.href='../plano-treinos/plano-treinos.html'">Planos</button>
+        </div>
+        <div id="caixa3">
+            <button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'">
+                <img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario">
+            </button>
+        </div>
+        <div id="caixa4">
+            <button type="button" id="sair" onclick="sair()">
+                <img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img">
+            </button>
+        </div>
+    </div>
+
+    <h1 id="tit">Plano: A</h1>
+
+    <div class="plano-layout">
+        <div id="caixa5">
+            <ol id="tit1">
+                <li>Aquecimento (10-15 min)</li><br>
+                <li>Shadow Boxing (3 rounds)</li><br>
+                <li>Trabalho de Manopla/Foco (3 rounds)</li><br>
+                <li>Saco de Pancadas (3-4 rounds)</li><br>
+                <li>Speed Bag/Teto-Solo (2-3 rounds)</li><br>
+                <li>Sparring ou Drills de Defesa (2-3 rounds)</li><br>
+                <li>Condicionamento Físico (2-3 rounds)</li><br>
+            </ol>
+        </div>
+        <div id="caixa6">
+            <h1 id="txt">Calistenia (flexões, abdominais, agachamentos) ou HIIT/Pliometria.</h1>
+            <br>
+            <button type="button" class="back-button" onclick="window.location.href='../plano-treinos/plano-treinos.html'">
+                ← Ver todos os treinos
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+        if (!usuario) window.location.href = "../login/login.html";
+        function sair() { sessionStorage.removeItem("usuarioLogado"); window.location.href = "../login/login.html"; }
+    </script>
+</body>
+</html>

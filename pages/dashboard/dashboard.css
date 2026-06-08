@@ -1,0 +1,112 @@
+.dashboard-layout { display: flex; flex-direction: column; padding: 20px 40px; gap: 20px; align-items: center; }
+.linha-caixas { display: flex; flex-direction: row; gap: 20px; width: 100%; flex-wrap: wrap; justify-content: center; }
+
+#caixa5, #caixa6 {
+    background-color: rgb(255,255,255);
+    border: 3px solid rgb(207,0,0);
+    flex: 1;
+    min-width: 260px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+#caixa7 {
+    background-color: rgb(255,255,255);
+    border: 3px solid rgb(207,0,0);
+    width: 100%;
+    max-width: 1260px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tit { font-family: Arial, sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
+#subtit { font-family: Arial, sans-serif; font-weight: 100; font-size: 17px; margin-top: -10px; }
+#grafico { width: 100%; max-width: 1000px; height: auto; }
+
+#TrA { background-color: rgb(104,0,0); border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+#TrB { background-color: #404040; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+#TrC { background-color: #998f8f; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+
+#fundo { display: none; }
+
+/* Extras para dashboard */
+.saudacao { padding: 100px 40px 0 40px; }
+.saudacao h1 { color: white; font-family: Arial, sans-serif; font-weight: 100; margin: 0; font-size: 32px; }
+.saudacao p  { color: #aaa; font-family: Arial, sans-serif; margin: 4px 0 0 0; }
+
+.resumo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 40px;
+    justify-content: center;
+}
+.card-resumo {
+    background: #1a1a1a;
+    border: 2px solid rgb(207,0,0);
+    border-radius: 16px;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 180px;
+    flex: 1;
+    max-width: 260px;
+}
+.card-icone { font-size: 32px; }
+.card-label { color: #aaa; font-family: Arial, sans-serif; font-size: 13px; margin: 0; }
+.card-valor { color: white; font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; }
+
+.grafico-wrapper { width: 100%; overflow-x: auto; }
+.grafico-titulo { font-family: Arial, sans-serif; font-weight: 100; font-size: 18px; margin: 0 0 12px 0; color: #333; }
+
+#caixa8 {
+    background-color: rgb(255,255,255);
+    border: 3px solid rgb(207,0,0);
+    width: 100%;
+    max-width: 1260px;
+    padding: 20px 28px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.tabela-historico {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.tabela-historico th {
+    background-color: rgb(207,0,0);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+}
+.tabela-historico td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+.tabela-historico tr:last-child td { border-bottom: none; }
+
+.status-cell {
+    font-weight: bold;
+}
+
+.status-cell--done {
+    color: green;
+}
+
+.status-cell--pending {
+    color: orange;
+}
+
+.status-cell--missed {
+    color: #a00000;
+}
