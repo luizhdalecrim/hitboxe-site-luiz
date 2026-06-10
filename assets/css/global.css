@@ -11,6 +11,62 @@ body {
     font-family: 'Glacial Indifference', sans-serif;
 }
 
+/* =====================
+   ACESSIBILIDADE GLOBAL
+   ===================== */
+
+/* Pular para o conteúdo principal */
+.skip-link {
+    position: fixed;
+    top: -100%;
+    left: 16px;
+    z-index: 9999;
+    background-color: rgb(104, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid white;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Foco visível para teclado — aplica a todos os elementos interativos */
+:focus-visible {
+    outline: 3px solid rgb(255, 120, 120);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Texto visível apenas para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Respeitar preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
 /* ── Navbar fixa ── */
 .home {
     position: fixed;
@@ -26,11 +82,17 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Logo absoluto à esquerda */
-#logo {
+/* Logo-link absoluto à esquerda */
+#logo-link {
     position: absolute;
     left: 20px;
     top: 7px;
+    display: block;
+    line-height: 0;
+    border-radius: 6px;
+}
+
+#logo {
     width: 50px;
     height: auto;
 }
@@ -78,8 +140,10 @@ body {
 }
 
 /* =====================
-   BOTÕES DA NAVBAR
+   LINKS/BOTÕES DA NAVBAR
    ===================== */
+
+/* Links e botões da navbar compartilham base tipográfica */
 #faq {
     background: none;
     border: none;
@@ -88,7 +152,8 @@ body {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    outline: none;
+    text-decoration: none;
+    display: inline-block;
     padding: 2px 6px;
     transition: color 0.2s ease;
 }
@@ -102,7 +167,8 @@ body {
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-    outline: none;
+    text-decoration: none;
+    display: inline-block;
     padding: 2px 10px;
     transition: background-color 0.2s ease, color 0.2s ease;
     letter-spacing: 0.03em;
@@ -116,7 +182,8 @@ body {
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-    outline: none;
+    text-decoration: none;
+    display: inline-block;
     padding: 2px 10px;
     white-space: nowrap;
     letter-spacing: 0.05em;
@@ -317,6 +384,7 @@ body #Bprincipal {
     gap: 24px;
 }
 
+/* Contraste corrigido: de rgba(255,255,255,0.55) → 0.80 para atingir ratio ≥ 4.5:1 */
 .footer-cta-eyebrow {
     display: block;
     font-family: 'Barlow Condensed', sans-serif;
@@ -324,7 +392,7 @@ body #Bprincipal {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.82);
     margin-bottom: 10px;
 }
 
@@ -350,6 +418,8 @@ body #Bprincipal {
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
@@ -464,6 +534,16 @@ body #Bprincipal {
     line-height: 1.5;
 }
 
+.footer-contact-item a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-contact-item a:hover {
+    color: white;
+}
+
 .footer-contact-item svg {
     flex-shrink: 0;
     margin-top: 2px;
@@ -480,7 +560,7 @@ body #Bprincipal {
     margin-right: 30px;
 }
 
-/* Rodapé inferior */
+/* Rodapé inferior — contraste corrigido: #666→#888, #555→#888 */
 .footer-bottom {
     max-width: 1200px;
     margin: 0 auto;
@@ -490,9 +570,9 @@ body #Bprincipal {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
-    color: #666;
+    color: #888;
     font-family: 'Glacial Indifference', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .footer-bottom p {
@@ -500,7 +580,7 @@ body #Bprincipal {
 }
 
 .footer-bottom strong {
-    color: #999;
+    color: #bbb;
 }
 
 .footer-bottom-links {
@@ -510,10 +590,10 @@ body #Bprincipal {
 }
 
 .footer-bottom-links a {
-    color: #555;
+    color: #888;
     text-decoration: none;
     font-family: 'Glacial Indifference', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     transition: color 0.2s ease;
 }
 
@@ -522,7 +602,7 @@ body #Bprincipal {
 }
 
 .footer-bottom-links span {
-    color: #444;
+    color: #666;
 }
 
 /* ── Responsividade ── */
