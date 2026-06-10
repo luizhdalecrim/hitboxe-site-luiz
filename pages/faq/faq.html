@@ -14,8 +14,7 @@
             <button type="button" id="faq" class="ativo" onclick="window.location.href='../faq/faq.html'">FAQ</button>
         </div>
         <div id="caixa2"></div>
-        <div id="caixa3"></div>
-        <div id="caixa4"></div>
+        <div id="caixa-auth"></div>
     </div>
 
     <div class="page-spacer"></div>
@@ -46,13 +45,14 @@
         </div>
     </div>
 
-    <br>
-    <h1 id="tit2">Acione a nossa equipe de</h1>
-    <h1 id="tit3">Suporte</h1>
-    <br><br>
-
-    <div id="caixa6">
-        <button type="button" id="chamado" onclick="alert('Chamado aberto! Nossa equipe entrará em contato em até 24h.')">Abrir Chamado</button>
+    <div class="suporte-section">
+        <div class="suporte-texto">
+            <h1 id="tit2">Não encontrou o que precisava?</h1>
+            <p id="suporte-desc">Acione nossa equipe de suporte e responderemos em até 24h.</p>
+        </div>
+        <button type="button" id="chamado" onclick="window.location.href='../chamado/chamado.html'">
+            Abrir Chamado
+        </button>
     </div>
 
     <script>
@@ -65,8 +65,7 @@
 
         const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
         const c2 = document.getElementById("caixa2");
-        const c3 = document.getElementById("caixa3");
-        const c4 = document.getElementById("caixa4");
+        const cAuth = document.getElementById("caixa-auth");
 
         if (usuario) {
             c2.innerHTML = `
@@ -74,15 +73,13 @@
                 <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Início</button>
                 <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
                 <button type="button" id="planos" onclick="window.location.href='../plano-treinos/plano-treinos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'"><img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario"></button>`;
-            c4.innerHTML = `<button type="button" id="sair" onclick="sessionStorage.removeItem('usuarioLogado');window.location.href='../login/login.html'"><img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img"></button>`;
+            cAuth.style.display = "none";
         } else {
             c2.innerHTML = `
                 <button type="button" id="sobre" onclick="window.location.href='../sobre/sobre.html'">Sobre</button>
                 <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Início</button>
                 <button type="button" id="planos" onclick="window.location.href='../planos/planos.html'">Planos</button>`;
-            c3.innerHTML = `<button type="button" id="cadastro" onclick="window.location.href='../cadastro/cadastro.html'">Cadastro</button>`;
-            c4.innerHTML = `<button type="button" id="Login" onclick="window.location.href='../login/login.html'">Login</button>`;
+            cAuth.innerHTML = `<button type="button" id="btn-auth" onclick="window.location.href='../login/login.html'">Entrar ou cadastrar-se</button>`;
         }
     </script>
 </body>

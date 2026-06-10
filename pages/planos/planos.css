@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
+
 #rolagem { margin-top: 80px; }
 
 #plano {
     color: white;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     margin-top: 40px;
     font-size: 46px;
     font-weight: 100;
@@ -27,7 +30,7 @@
     text-shadow: 2px 2px 5px white;
     -webkit-text-stroke: 0.5px white;
     font-size: 36px;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
 }
 
 p { color: white; font-size: 18px; }
@@ -51,7 +54,7 @@ p { color: white; font-size: 18px; }
 #round, #professional {
     color: white;
     font-size: 46px;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -145,7 +148,7 @@ p { color: white; font-size: 18px; }
 .Tit {
     color: white;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 46px;
     text-decoration: underline;
     font-weight: 100;
@@ -179,7 +182,7 @@ p { color: white; font-size: 18px; }
 
 #tit-hero {
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 50px;
     font-weight: 100;
     text-decoration: underline;
@@ -188,7 +191,7 @@ p { color: white; font-size: 18px; }
 
 #subtit-hero1 {
     color: white;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 40px;
     font-weight: 100;
     margin: 0;
@@ -203,7 +206,7 @@ p { color: white; font-size: 18px; }
 
 #subtit-hero2 {
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 20px;
     font-weight: 100;
     margin: 10px 0 0 0;
@@ -271,7 +274,7 @@ p { color: white; font-size: 18px; }
 }
 
 .preco-antigo {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 17px;
     color: #888;
     text-decoration: line-through;
@@ -279,7 +282,7 @@ p { color: white; font-size: 18px; }
 }
 
 .preco-destaque {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -290,7 +293,7 @@ p { color: white; font-size: 18px; }
 }
 
 .preco-gratis {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 13px;
     color: #666;
     margin-top: 4px;
@@ -312,7 +315,7 @@ p { color: white; font-size: 18px; }
 }
 
 .plano-lista li {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 16px;
     color: rgb(30, 30, 30);
     padding-left: 26px;
@@ -336,7 +339,7 @@ p { color: white; font-size: 18px; }
     border: 2px solid black;
     border-radius: 100px;
     padding: 14px 28px;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 20px;
     cursor: pointer;
     outline: none;
@@ -350,4 +353,24 @@ p { color: white; font-size: 18px; }
 
 .experiencia-gratis {
     color: #aaa;
+}
+
+/* =====================
+   HOVER — PLANOS
+   ===================== */
+.btn-matricula {
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.btn-matricula:hover {
+    background-color: rgb(150, 0, 0);
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(200, 0, 0, 0.4);
+}
+
+.sobreplano button {
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.sobreplano button:hover {
+    background-color: rgb(180, 0, 0);
+    transform: scale(1.04);
 }

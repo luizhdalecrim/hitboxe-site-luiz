@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
+
 .cadastro-layout {
     display: flex;
     flex-direction: row;
@@ -27,8 +30,8 @@
     align-self: flex-start;
 }
 
-#tit { font-family: Arial, sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
-#subtit, #subtit2 { font-family: Arial, sans-serif; font-weight: 100; font-size: 20px; margin: 0; }
+#tit { font-family: 'Oswald', sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
+#subtit, #subtit2 { font-family: 'Glacial Indifference', sans-serif; font-weight: 100; font-size: 20px; margin: 0; }
 
 .email-input, #senha, #senha1 {
     width: 100%;
@@ -38,14 +41,14 @@
     box-sizing: border-box;
 }
 
-#obrigatoriedades { font-family: Arial, sans-serif; font-size: 16px; margin: 4px 0; padding-left: 16px; }
+#obrigatoriedades { font-family: 'Glacial Indifference', sans-serif; font-size: 16px; margin: 4px 0; padding-left: 16px; }
 #tit2 { font-size: 18px; margin: 0 0 4px 0; }
 
 #btcadastro {
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px 20px;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 22px;
     cursor: pointer;
     outline: none;
@@ -62,10 +65,21 @@
     gap: 10px;
 }
 
-#txtChbx { font-family: Arial, sans-serif; font-size: 17px; font-weight: 100; }
+#txtChbx { font-family: 'Glacial Indifference', sans-serif; font-size: 17px; font-weight: 100; }
 
 .auth-switch {
     color: #555;
     font-size: 14px;
     text-align: center;
+}
+
+/* =====================
+   HOVER — CADASTRO
+   ===================== */
+#btcadastro {
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+#btcadastro:hover {
+    background-color: rgb(150, 0, 0);
+    transform: scale(1.04);
 }

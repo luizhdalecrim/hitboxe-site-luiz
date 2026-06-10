@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
+
 /* ===================== HERO ===================== */
 .container {
     position: relative;
@@ -31,7 +34,7 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 32px;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     white-space: nowrap;
     margin: 0;
 }
@@ -45,18 +48,19 @@
     border: 1px solid white;
     border-radius: 100px;
     color: white;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 20px;
     padding: 16px 24px;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* ===================== DIFERENCIAIS ===================== */
 .Tit {
     color: white;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 46px;
     text-decoration: underline;
     font-weight: 100;
@@ -178,13 +182,14 @@
     border: 2px solid rgb(0, 0, 0);
     border-radius: 70px;
     color: white;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
     display: block;
     margin: 14px auto 0 auto;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .Matriculas1 {
@@ -192,11 +197,27 @@
     border: 1px solid white;
     border-radius: 70px;
     color: white;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
     display: block;
     margin: 14px auto 0 auto;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* =====================
+   HOVER — HOME
+   ===================== */
+#Bprincipal:hover {
+    background-color: rgb(150, 0, 0);
+    transform: translate(-50%, -50%) scale(1.04);
+    box-shadow: 0 4px 18px rgba(200, 0, 0, 0.45);
+}
+
+.Matriculas:hover,
+.Matriculas1:hover {
+    background-color: rgb(150, 0, 0);
+    transform: scale(1.04);
 }
