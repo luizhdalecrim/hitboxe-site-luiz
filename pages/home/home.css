@@ -56,25 +56,24 @@
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ===================== DIFERENCIAIS ===================== */
+/* ===================== TÍTULOS DE SEÇÃO ===================== */
 .Tit {
     color: white;
     text-align: center;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 46px;
+    font-weight: 600;
     text-decoration: underline;
-    font-weight: 100;
+    text-decoration-color: rgb(207, 0, 0);
+    text-underline-offset: 6px;
+    letter-spacing: 0.04em;
     margin: 40px 0 20px 0;
 }
 
+/* ===================== DIFERENCIAIS ===================== */
 .secao-diferenciais {
     text-align: center;
     padding: 20px 40px 60px 40px;
-}
-
-.secao-diferenciais-inner {
-    display: inline-block;
-    vertical-align: top;
 }
 
 #caixa5 {
@@ -98,6 +97,7 @@
 .diferenciais {
     margin-left: 20px;
     font-size: 20px;
+    font-family: 'Glacial Indifference', sans-serif;
     color: black;
 }
 
@@ -161,6 +161,7 @@
 .diferenciais1, .diferenciais2 {
     margin-left: 10px;
     font-size: 16px;
+    font-family: 'Glacial Indifference', sans-serif;
     color: black;
 }
 
@@ -174,16 +175,19 @@
 .diferenciais3 {
     margin-left: 10px;
     font-size: 16px;
+    font-family: 'Glacial Indifference', sans-serif;
     color: white;
 }
 
+/* Botões de matrícula */
 .Matriculas {
     background-color: rgb(104, 0, 0);
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 70px;
+    border-radius: 100px;
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
+    letter-spacing: 0.04em;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
@@ -195,10 +199,11 @@
 .Matriculas1 {
     background-color: rgb(104, 0, 0);
     border: 1px solid white;
-    border-radius: 70px;
+    border-radius: 100px;
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
+    letter-spacing: 0.04em;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
@@ -207,9 +212,7 @@
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* =====================
-   HOVER — HOME
-   ===================== */
+/* ===================== HOVER — HOME ===================== */
 #Bprincipal:hover {
     background-color: rgb(150, 0, 0);
     transform: translate(-50%, -50%) scale(1.04);
