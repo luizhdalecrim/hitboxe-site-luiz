@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
+
+/* ── Hero ── */
+.chamado-hero {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+#tit {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.04em;
+    text-decoration: underline;
+    text-decoration-color: rgb(207, 0, 0);
+    text-underline-offset: 6px;
+}
+
+#subtit {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 18px;
+    color: #aaa;
+    margin: 10px 0 0 0;
+}
+
+/* ── Layout ── */
+.chamado-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 36px 40px 80px 40px;
+    flex-wrap: wrap;
+}
+
+/* ── Card formulário ── */
+#caixa-form {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(207, 0, 0);
+    width: 480px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#tit-form {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin: 4px 0 2px 0;
+    letter-spacing: 0.03em;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 4px 0;
+}
+
+/* ── Campos ── */
+.campo-label {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin: 8px 0 2px 0;
+    display: block;
+}
+
+.obrig {
+    color: rgb(207, 0, 0);
+    font-weight: bold;
+}
+
+.campo-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 15px;
+    color: #111;
+    background-color: #fafafa;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.campo-input:focus {
+    border-color: rgb(207, 0, 0);
+    box-shadow: 0 0 0 3px rgba(207, 0, 0, 0.12);
+    background-color: #fff;
+}
+
+select.campo-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+textarea.campo-input {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* ── Erro ── */
+.msg-erro {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 14px;
+    color: rgb(207, 0, 0);
+    margin: 4px 0 0 0;
+    font-weight: bold;
+}
+
+/* ── Ações ── */
+.form-acoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#btn-voltar {
+    background: none;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    padding: 9px 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+#btn-voltar:hover {
+    border-color: #666;
+    color: #111;
+}
+
+#btn-enviar {
+    background-color: rgb(104, 0, 0);
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 0.04em;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+#btn-enviar:hover {
+    background-color: rgb(150, 0, 0);
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(200, 0, 0, 0.4);
+}
+
+/* ── Estado de sucesso ── */
+#estado-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#estado-sucesso {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.sucesso-icone {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgb(104, 0, 0);
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#tit-sucesso {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    margin: 0;
+}
+
+.sucesso-txt {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+}
+
+.num-protocolo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(104, 0, 0);
+    background-color: #f5e9e9;
+    border: 1px dashed rgb(207, 0, 0);
+    border-radius: 10px;
+    padding: 8px 20px;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.resumo-chamado {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 14px 18px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.resumo-linha {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.resumo-msg {
+    align-items: flex-start;
+}
+
+.resumo-key {
+    font-weight: 700;
+    color: #111;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+#btn-novo {
+    background: none;
+    border: 2px solid rgb(104, 0, 0);
+    border-radius: 20px;
+    padding: 9px 22px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    color: rgb(104, 0, 0);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#btn-novo:hover {
+    background-color: rgb(104, 0, 0);
+    color: white;
+}
+
+#btn-inicio {
+    background-color: #111;
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 9px 22px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#btn-inicio:hover {
+    background-color: #222;
+    border-color: #888;
+}
+
+/* ── Card informativo ── */
+#caixa-info {
+    background-color: #111;
+    border: 1px solid #333;
+    width: 280px;
+    padding: 26px 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.info-tit {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.hr-dark {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 2px 0;
+    width: 100%;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.info-icone {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-label {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.info-val {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 14px;
+    color: #ddd;
+    margin: 0;
+}
+
+/* ── Badges de tempo ── */
+.tempo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tempo-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    min-width: 68px;
+    text-align: center;
+}
+
+.tempo-badge.urgente  { background-color: rgb(104, 0, 0); color: white; }
+.tempo-badge.normal   { background-color: #404040;        color: white; }
+.tempo-badge.baixo    { background-color: #1e3a5f;        color: #adc8ff; }

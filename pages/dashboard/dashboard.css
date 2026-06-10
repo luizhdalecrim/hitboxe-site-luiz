@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
+
 .dashboard-layout { display: flex; flex-direction: column; padding: 20px 40px; gap: 20px; align-items: center; }
 .linha-caixas { display: flex; flex-direction: row; gap: 20px; width: 100%; flex-wrap: wrap; justify-content: center; }
 
@@ -27,20 +30,20 @@
     align-items: center;
 }
 
-#tit { font-family: Arial, sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
-#subtit { font-family: Arial, sans-serif; font-weight: 100; font-size: 17px; margin-top: -10px; }
+#tit { font-family: 'Oswald', sans-serif; font-weight: 100; text-decoration: underline; font-size: 28px; margin: 0; }
+#subtit { font-family: 'Glacial Indifference', sans-serif; font-weight: 100; font-size: 17px; margin-top: -10px; }
 #grafico { width: 100%; max-width: 1000px; height: auto; }
 
-#TrA { background-color: rgb(104,0,0); border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
-#TrB { background-color: #404040; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
-#TrC { background-color: #998f8f; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Gill Sans', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+#TrA { background-color: rgb(104,0,0); border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+#TrB { background-color: #404040; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
+#TrC { background-color: #998f8f; border: 2px solid black; border-radius: 100px; padding: 12px 10px; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; cursor: pointer; outline: none; width: 100%; color: white; }
 
 #fundo { display: none; }
 
 /* Extras para dashboard */
 .saudacao { padding: 100px 40px 0 40px; }
-.saudacao h1 { color: white; font-family: Arial, sans-serif; font-weight: 100; margin: 0; font-size: 32px; }
-.saudacao p  { color: #aaa; font-family: Arial, sans-serif; margin: 4px 0 0 0; }
+.saudacao h1 { color: white; font-family: 'Oswald', sans-serif; font-weight: 100; margin: 0; font-size: 32px; }
+.saudacao p  { color: #aaa; font-family: 'Glacial Indifference', sans-serif; margin: 4px 0 0 0; }
 
 .resumo-cards {
     display: flex;
@@ -62,11 +65,11 @@
     max-width: 260px;
 }
 .card-icone { font-size: 32px; }
-.card-label { color: #aaa; font-family: Arial, sans-serif; font-size: 13px; margin: 0; }
-.card-valor { color: white; font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; }
+.card-label { color: #aaa; font-family: 'Glacial Indifference', sans-serif; font-size: 13px; margin: 0; }
+.card-valor { color: white; font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: bold; margin: 0; }
 
 .grafico-wrapper { width: 100%; overflow-x: auto; }
-.grafico-titulo { font-family: Arial, sans-serif; font-weight: 100; font-size: 18px; margin: 0 0 12px 0; color: #333; }
+.grafico-titulo { font-family: 'Oswald', sans-serif; font-weight: 100; font-size: 18px; margin: 0 0 12px 0; color: #333; }
 
 #caixa8 {
     background-color: rgb(255,255,255);
@@ -80,7 +83,7 @@
 .tabela-historico {
     width: 100%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 15px;
 }
 .tabela-historico th {
@@ -109,4 +112,15 @@
 
 .status-cell--missed {
     color: #a00000;
+}
+
+/* =====================
+   HOVER — DASHBOARD
+   ===================== */
+#TrA, #TrB, #TrC {
+    transition: filter 0.2s ease, transform 0.15s ease;
+}
+#TrA:hover, #TrB:hover, #TrC:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
 }
