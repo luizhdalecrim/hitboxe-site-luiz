@@ -6,10 +6,10 @@
     <title>Sistema-Hitboxe</title>
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="pages/home/home.css">
-
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <div class="home">
         <img id="logo" src="assets/img/logos/logo-hitboxe.png" alt="logo Hitboxe">
 
@@ -17,15 +17,8 @@
             <button type="button" id="faq" onclick="location.href='pages/faq/faq.html'">FAQ</button>
         </div>
 
-        <div id="caixa2">
-            <button type="button" id="sobre" onclick="location.href='pages/sobre/sobre.html'">Sobre</button>
-            <button type="button" id="inicio" class="ativo">Início</button>
-            <button type="button" id="planos" onclick="location.href='pages/planos/planos.html'">Planos</button>
-        </div>
-
-        <div id="caixa-auth">
-            <button type="button" id="btn-auth" onclick="location.href='pages/login/login.html'">Entrar ou cadastrar-se</button>
-        </div>
+        <div id="caixa2"></div>
+        <div id="caixa-auth"></div>
     </div>
 
     <!-- HERO -->
@@ -80,6 +73,28 @@
             <button type="button" class="Matriculas1" onclick="location.href='pages/cadastro/cadastro.html'">Matricule-se</button>
         </div>
     </div>
+
+    <script>
+        /* ── Navbar dinâmica (padrão faq/chamado) ── */
+        const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+        const c2    = document.getElementById("caixa2");
+        const cAuth = document.getElementById("caixa-auth");
+
+        if (usuario) {
+            c2.innerHTML = `
+                <button type="button" id="dashboard"   onclick="location.href='pages/dashboard/dashboard.html'">Dashboard</button>
+                <button type="button" id="inicio"      class="ativo">Início</button>
+                <button type="button" id="consultoria" onclick="location.href='pages/consultoria/consultoria.html'">Consultoria</button>
+                <button type="button" id="planos"      onclick="location.href='pages/plano-treinos/plano-treinos.html'">Planos</button>`;
+            cAuth.style.display = "none";
+        } else {
+            c2.innerHTML = `
+                <button type="button" id="sobre"  onclick="location.href='pages/sobre/sobre.html'">Sobre</button>
+                <button type="button" id="inicio" class="ativo">Início</button>
+                <button type="button" id="planos" onclick="location.href='pages/planos/planos.html'">Planos</button>`;
+            cAuth.innerHTML = `<button type="button" id="btn-auth" onclick="location.href='pages/login/login.html'">Entrar ou cadastrar-se</button>`;
+        }
+    </script>
 
 </body>
 </html>
