@@ -8,24 +8,22 @@
   styleVLibras.innerHTML = `
     #a11y-fab, #a11y-panel { z-index: 2147483647 !important; }
     
-    /* VLibras EM CIMA do ícone do painel (Verticalmente) */
+    /* VLibras EM CIMA do ícone do painel */
     div[vw] {
       position: fixed !important;
-      bottom: 95px !important;  /* Distância exata para ficar acima do botão do painel */
-      right: 28px !important;    /* Mesmo alinhamento do botão do painel */
+      bottom: 95px !important;  
+      right: 28px !important;    
       top: auto !important;
       left: auto !important;
       transform: none !important;
-      z-index: 2147483646 !important; /* Atrás do painel se ele abrir */
-      pointer-events: none !important; /* Impede a caixa invisível de bloquear os cliques */
+      z-index: 2147483646 !important; 
+      pointer-events: none !important; 
     }
     
-    /* Mantém o avatar do Libras clicável */
     div[vw] [vw-access-button], div[vw] [vw-plugin-wrapper] {
       pointer-events: auto !important;
     }
     
-    /* Animação: Sobe o Libras se abrir o painel */
     body.a11y-panel-open div[vw] {
       bottom: 480px !important;
     }
@@ -53,7 +51,7 @@
   }
   injectVLibras();
 
-  /* TTS */
+  /* Leitor de Texto (TTS) */
   let ttsActive = false;
   function ttsSpeak(text) {
     if (!window.speechSynthesis) return;
@@ -72,19 +70,16 @@
     if (text && text.trim().length > 2) ttsSpeak(text.trim());
   }
   function enableTTS() {
-    ttsActive = true;
-    document.body.classList.add('a11y-tts-mode');
-    document.addEventListener('click', ttsClickHandler, true);
-    ttsSpeak('Leitor ativado.');
+    ttsActive = true; document.body.classList.add('a11y-tts-mode');
+    document.addEventListener('click', ttsClickHandler, true); ttsSpeak('Leitor ativado.');
   }
   function disableTTS() {
-    ttsActive = false;
-    document.body.classList.remove('a11y-tts-mode');
+    ttsActive = false; document.body.classList.remove('a11y-tts-mode');
     document.removeEventListener('click', ttsClickHandler, true);
     if (window.speechSynthesis) window.speechSynthesis.cancel();
   }
 
-  /* Filtros */
+  /* Filtros para Daltonismo */
   const FILTERS = { nenhum: '', deuteranopia:'url(#a11y-deuteranopia)', protanopia:'url(#a11y-protanopia)', tritanopia:'url(#a11y-tritanopia)' };
   function injectSVGFilters() {
     if (document.getElementById('a11y-svg-filters')) return;
@@ -99,8 +94,7 @@
     document.body.insertAdjacentElement('afterbegin', svg);
   }
   function applyColorFilter(type) {
-    injectSVGFilters();
-    document.documentElement.style.filter = FILTERS[type] || '';
+    injectSVGFilters(); document.documentElement.style.filter = FILTERS[type] || '';
     document.body.classList.remove('a11y-deuteranopia','a11y-protanopia','a11y-tritanopia');
     if (type !== 'nenhum') document.body.classList.add('a11y-' + type);
   }
@@ -140,8 +134,22 @@
 
     function openPanel() { panel.classList.add('open'); document.body.classList.add('a11y-panel-open'); }
     function closePanel() { panel.classList.remove('open'); document.body.classList.remove('a11y-panel-open'); }
-    fab.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
+    
+    // Toggle clicking the FAB
+    fab.addEventListener('click', (e) => {
+        e.stopPropagation(); // Previne fechar logo em seguida
+        panel.classList.contains('open') ? closePanel() : openPanel();
+    });
+    
     document.getElementById('a11y-close').addEventListener('click', closePanel);
+
+    // FECHAR AO CLICAR FORA! 
+    document.addEventListener('click', (e) => {
+      // Se o painel está aberto, o clique não foi no painel e nem no botão VLibras
+      if (panel.classList.contains('open') && !panel.contains(e.target) && !e.target.closest('[vw]')) {
+        closePanel();
+      }
+    });
 
     const ttsBtn = document.getElementById('a11y-tts-btn');
     if (state.tts) enableTTS();
