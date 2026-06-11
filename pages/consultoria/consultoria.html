@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="consultoria.css">
 
 </head>
-<body>
+<body>    
+    <!-- NAVBAR -->
     <div class="home home--logged">
         <img id="logo" src="../../assets/img/logos/logo-hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
             <button type="button" id="faq" onclick="window.location.href='../faq/faq.html'">FAQ</button>
         </div>
         <div id="caixa2">
-            <button type="button" id="dashboard" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
+            <button type="button" id="dashboard" class="ativo" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
             <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Início</button>
-            <button type="button" id="consultoria" class="ativo">Consultoria</button>
+            <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
             <button type="button" id="planos" onclick="window.location.href='../plano-treinos/plano-treinos.html'">Planos</button>
         </div>
-        <div id="caixa3">
+        <div id="nav-user-actions">
             <button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'">
-                <img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario">
+                <img src="../../assets/img/Botao usuario.png" alt="Perfil do usuário" id="fotousuario">
             </button>
-        </div>
-        <div id="caixa4">
-            <button type="button" id="sair" onclick="sair()">
+            <button type="button" id="sair" onclick="sair()" aria-label="Sair da conta">
                 <img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img">
             </button>
         </div>
@@ -51,7 +50,100 @@
             </div>
         </div>
     </div>
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Rodapé do site">
+        <div class="footer-top">
 
+            <!-- Marca + Redes -->
+            <div class="footer-brand">
+                <img src="../../assets/img/logos/logo-hitboxe.png" alt="Logo Hitboxe" class="footer-logo">
+                <p class="footer-brand-desc">
+                    Treinamento personalizado, evolução real. Da base ao campeonato, estamos em cada round.
+                </p>
+                <nav aria-label="Redes sociais">
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="Instagram da Hitboxe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube da Hitboxe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor"
+                                    stroke-width="2" />
+                                <polygon points="10,8.5 10,15.5 16,12" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Facebook da Hitboxe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                    stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Atalhos -->
+            <nav class="footer-links" aria-label="Atalhos do site">
+                <h3>Atalhos</h3>
+                <a href="index.html">Início</a>
+                <a href="pages/sobre/sobre.html">Sobre</a>
+                <a href="pages/planos/planos.html">Planos</a>
+                <a href="pages/faq/faq.html">FAQ</a>
+            </nav>
+
+            <!-- Contato -->
+            <address class="footer-links" aria-label="Informações de contato">
+                <h3>Contato</h3>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            stroke="currentColor" stroke-width="2" />
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <a href="mailto:contato@hitboxe.com.br">contato@hitboxe.com.br</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.39 19a19.45 19.45 0 0 1-5-5A19.79 19.79 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 5 5l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <a href="tel:+551899999999">(18) 99999-9999</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" focusable="false">
+                        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" stroke="currentColor"
+                            stroke-width="2" />
+                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>Presidente Prudente — SP</span>
+                </div>
+            </address>
+        </div>
+
+        <!-- Linha divisória -->
+        <div class="footer-divider" role="separator"></div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Hitboxe</strong>. Todos os direitos reservados.</p>
+            <nav class="footer-bottom-links" aria-label="Links legais">
+                <a href="#">Termos de Uso</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">Privacidade</a>
+            </nav>
+        </div>
+    </footer>
     <script>
         const usuario = JSON.parse(sessionStorage.getItem("usuarioLogado"));
         if (!usuario) window.location.href = "../login/login.html";
@@ -96,5 +188,8 @@
             setTimeout(() => { msg.style.display = "none"; }, 3000);
         }
     </script>
+
+  
+  <script src="../../assets/js/acessibilidade.js"></script>
 </body>
 </html>

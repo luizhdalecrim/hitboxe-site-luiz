@@ -39,11 +39,13 @@
     margin: 0;
 }
 
+/* Convertido para <a> — display:inline-block necessário para transform funcionar */
 #Bprincipal {
     position: absolute;
     top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: inline-block;
     background-color: rgb(104, 0, 0);
     border: 1px solid white;
     border-radius: 100px;
@@ -51,6 +53,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 20px;
     padding: 16px 24px;
+    text-decoration: none;
     cursor: pointer;
     outline: none;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -76,19 +79,24 @@
     padding: 20px 40px 60px 40px;
 }
 
+/* Convertido para <ul> — reset de estilos de lista */
 #caixa5 {
+    list-style: none;
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(207, 0, 0);
     width: 400px;
     padding: 20px 20px 20px 10px;
+    margin: 0;
     border-radius: 20px;
     display: inline-block;
     vertical-align: middle;
     text-align: left;
 }
 
+/* Ícone ✓ via CSS; alt vazio (/ '') para não ser lido por leitores de tela,
+   pois o contexto semântico de lista já comunica a ideia de inclusão */
 .diferenciais::before {
-    content: '✓';
+    content: '✓' / '';
     color: rgb(207, 0, 0);
     margin-right: 8px;
     font-weight: bold;
@@ -114,55 +122,121 @@
 
 /* ===================== PLANOS ===================== */
 .secao-planos {
-    text-align: center;
-    padding: 20px 40px 80px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 52px 32px 100px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.caixas1, .caixas2 {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(207, 0, 0);
+/* Cards base */
+.caixas1,
+.caixas2 {
+    background-color: #fff;
+    border: 1.5px solid rgb(207, 0, 0);
     width: 300px;
-    padding: 16px;
-    border-radius: 20px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 10px;
+    padding: 24px 22px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 }
 
+/* Card destaque — Nocaute */
 .caixas3 {
-    background-color: rgb(0, 0, 0);
-    border: 2px solid rgb(207, 0, 0);
-    width: 300px;
-    padding: 16px;
-    border-radius: 20px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 10px;
+    background-color: #0d0d0d;
+    border: 1.5px solid rgb(207, 0, 0);
+    width: 316px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
+    position: relative;
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(207, 0, 0, 0.22);
 }
 
-#plano-round, #plano-professional, #plano-nocaute {
-    width: 90%;
+/* Badge "Mais Popular" */
+.caixas3::before {
+    content: 'MAIS POPULAR';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(207, 0, 0);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    padding: 5px 18px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+/* Imagens dos planos */
+#plano-round,
+#plano-professional,
+#plano-nocaute {
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 0 18px 0;
+    border-radius: 8px;
 }
 
-.diferenciais1::before, .diferenciais2::before {
+/* Wrapper de features — empurra botão para baixo */
+.plan-features {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Features — planos claros */
+.diferenciais1,
+.diferenciais2 {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    font-family: 'Glacial Indifference', sans-serif;
+    color: #111;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.diferenciais1:last-of-type,
+.diferenciais2:last-of-type {
+    margin-bottom: 0;
+}
+
+.diferenciais1::before,
+.diferenciais2::before {
     content: '✓';
     color: rgb(207, 0, 0);
     margin-right: 8px;
     font-weight: bold;
+    flex-shrink: 0;
+    line-height: 1.4;
 }
 
-.diferenciais1, .diferenciais2 {
-    margin-left: 10px;
-    font-size: 16px;
+/* Features — plano escuro (Nocaute) */
+.diferenciais3 {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
     font-family: 'Glacial Indifference', sans-serif;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.diferenciais3:last-of-type {
+    margin-bottom: 0;
 }
 
 .diferenciais3::before {
@@ -170,47 +244,55 @@
     color: rgb(207, 0, 0);
     margin-right: 8px;
     font-weight: bold;
+    flex-shrink: 0;
+    line-height: 1.4;
 }
 
-.diferenciais3 {
-    margin-left: 10px;
-    font-size: 16px;
-    font-family: 'Glacial Indifference', sans-serif;
-    color: white;
-}
-
-/* Botões de matrícula */
+/* ── Botões de matrícula ── */
 .Matriculas {
     background-color: rgb(104, 0, 0);
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 100px;
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.04em;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
     display: block;
-    margin: 14px auto 0 auto;
+    width: 100%;
+    margin-top: auto;
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .Matriculas1 {
     background-color: rgb(104, 0, 0);
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 100px;
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.04em;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     padding: 12px 20px;
     cursor: pointer;
     outline: none;
     display: block;
-    margin: 14px auto 0 auto;
+    width: 100%;
+    margin-top: auto;
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
+
+.Matriculas:hover,
+.Matriculas1:hover {
+    background-color: rgb(150, 0, 0);
+    transform: translateY(-1px);
+}
+
 
 /* ===================== HOVER — HOME ===================== */
 #Bprincipal:hover {

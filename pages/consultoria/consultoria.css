@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
 
+/* ── Grupo de ações do usuário na navbar (ícone + sair) ── */
+#nav-user-actions {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 /* CONTEÚDO PRINCIPAL */
 #tit { font-family: 'Oswald', sans-serif; font-weight: 100; margin-top: 30px; text-decoration: underline; font-size: 35px; color: white; text-align: center; }
 

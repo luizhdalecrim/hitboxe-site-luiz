@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@400;500;600&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&display=swap');
 
+/* ── Grupo de ações do usuário na navbar (ícone + sair) ── */
+#nav-user-actions {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 .dashboard-layout { display: flex; flex-direction: column; padding: 20px 40px; gap: 20px; align-items: center; }
 .linha-caixas { display: flex; flex-direction: row; gap: 20px; width: 100%; flex-wrap: wrap; justify-content: center; }
 
