@@ -9,29 +9,27 @@
 
 </head>
 <body>
+    <!-- NAVBAR -->
     <div class="home home--logged">
         <img id="logo" src="../../assets/img/logos/logo-hitboxe.png" alt="logo Hitboxe">
         <div id="caixa1">
             <button type="button" id="faq" onclick="window.location.href='../faq/faq.html'">FAQ</button>
         </div>
         <div id="caixa2">
-            <button type="button" id="dashboard" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
-            <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Ínicio</button>
+            <button type="button" id="dashboard" class="ativo" onclick="window.location.href='../dashboard/dashboard.html'">Dashboard</button>
+            <button type="button" id="inicio" onclick="window.location.href='../../index.html'">Início</button>
             <button type="button" id="consultoria" onclick="window.location.href='../consultoria/consultoria.html'">Consultoria</button>
-            <button type="button" id="planos" class="ativo">Planos</button>
+            <button type="button" id="planos" onclick="window.location.href='../plano-treinos/plano-treinos.html'">Planos</button>
         </div>
-        <div id="caixa3">
+        <div id="nav-user-actions">
             <button type="button" id="usuario" onclick="window.location.href='../dashboard/dashboard.html'">
-                <img src="../../assets/img/Botao usuario.png" alt="Usuário" id="fotousuario">
+                <img src="../../assets/img/Botao usuario.png" alt="Perfil do usuário" id="fotousuario">
             </button>
-        </div>
-        <div id="caixa4">
-            <button type="button" id="sair" onclick="sair()">
+            <button type="button" id="sair" onclick="sair()" aria-label="Sair da conta">
                 <img src="../../assets/img/botao-sair.png" alt="Sair" class="icon-button-img">
             </button>
         </div>
     </div>
-
     <h1 id="tit">Planos de Treino</h1>
 
     <div class="plano-layout">
